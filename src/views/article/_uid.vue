@@ -1,3 +1,3 @@
 <template>
-	<router-view />
+	<div>Un article</div>
 </template>
