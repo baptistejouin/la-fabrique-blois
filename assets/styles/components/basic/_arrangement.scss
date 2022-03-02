@@ -9,7 +9,12 @@
 }
 
 #titresaccueil {
-    padding: 50px 50px 0 50px;
+    align-self: center;
+    padding: 30px 50px 0 50px;
+}
+
+#titresaccueil h2 {
+    margin-bottom: 60px;
 }
 
 #slider {
@@ -21,4 +26,8 @@
     height: 500px;
     object-fit: cover;
     border-radius: 16px;
+}
+
+#accesrapide button {
+    margin-right: 30px;
 }
