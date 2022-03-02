@@ -10,8 +10,7 @@
 			</li>
 		</ul>
 
-		<!-- <slice-zone :slice="article.data.body" :components="components" /> -->
-		<!-- <slice-zone :slice="article.data.body" :resolver="({ sliceName }) => slices[sliceName]" /> -->
+		<slice-zone :slices="article.data.body" :components="components" />
 
 		<br />
 		<pre>{{ article.data }}</pre>
@@ -21,9 +20,13 @@
 import { useRoute } from 'vue-router';
 import { usePrismicDocumentByUID } from '@prismicio/vue';
 
+import ParagraphSlice from '@/slices/ParagraphSlice.vue';
+import GrilleImageSlice from '@/slices/GrilleImageSlice.vue';
+
 const route = useRoute();
 
 const { data: article } = usePrismicDocumentByUID('articles', route.params.uid);
+const components = { paragraphe: ParagraphSlice, grille_d_image: GrilleImageSlice };
 </script>
 
 <style>
