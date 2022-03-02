@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#titresaccueil,
+#slider {
+    width: 50%;
+}
+
+#titresaccueil {
+    padding: 50px 50px 0 50px;
+}
+
+#slider {
+    padding: 50px 50px 0 50px;
+}
+
+#slider img {
+    width: 640px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+}
