@@ -1,15 +1,9 @@
 import { createPrismic } from "@prismicio/vue"
+import { linkResolver } from "./linkResolver"
 
 const prismic = createPrismic({
 	endpoint: "la-fabrique-blois",
-	clientConfig: {
-		defaultParams: {
-			routes: [
-				{ type: "home", path="/" },
-				{ type: "post", path="/article/:uid" },
-			]
-		}
-	}
+	linkResolver
 })
 
 export default prismic
