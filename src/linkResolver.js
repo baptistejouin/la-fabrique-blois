@@ -1,5 +1,5 @@
 export function linkResolver(document) {
-	if (document.type === "post") return "/article/" + document.uid
+	if (document.type === "articles") return "/article/" + document.uid
 
 	return "/"
 }
