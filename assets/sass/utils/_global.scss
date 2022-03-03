@@ -33,6 +33,9 @@ h1 {
 	@include before(md) {
 		font-size: 40px;
 	}
+	@include before(sm) {
+		font-size: 36px;
+	}
 }
 button {
 	cursor: pointer;

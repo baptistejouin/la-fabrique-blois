@@ -1,16 +1,21 @@
 .btn {
 	padding: 11px 24px;
 	border-radius: 16px;
-	background-color: $vertfab;
+	background-color: $vert;
 	color: white;
 
 	&__wrapper {
 		display: flex;
 		gap: 30px;
+		@include before(sm) {
+			text-align: center;
+			flex-direction: column;
+			gap: 14px;
+		}
 	}
 
 	&--secondary {
-		background-color: rgba($vertfab, 0.2);
-		color: $vertfab;
+		background-color: $vert-20;
+		color: $vert;
 	}
 }
