@@ -13,7 +13,11 @@
 		<slice-zone :slices="article.data.body" :components="components" />
 
 		<br />
-		<pre>{{ article.data }}</pre>
+		<details>
+			<summary>Réponse JSON</summary>
+			<pre>{{ article }}</pre>
+		</details>
+		<br />
 	</main>
 </template>
 <script setup>
@@ -26,6 +30,7 @@ import GrilleImageSlice from '@/slices/GrilleImageSlice.vue';
 const route = useRoute();
 
 const { data: article } = usePrismicDocumentByUID('articles', route.params.uid);
+// Handle if no article -> 404 page
 const components = { paragraphe: ParagraphSlice, grille_d_image: GrilleImageSlice };
 </script>
 

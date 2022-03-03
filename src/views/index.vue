@@ -19,6 +19,12 @@
 					</li>
 				</ul>
 			</section>
+			<br />
+			<details>
+				<summary>Réponse JSON</summary>
+				<pre>{{ articles }}</pre>
+			</details>
+			<br />
 		</template>
 	</header>
 </template>
