@@ -1,0 +1,26 @@
+.header {
+    &__left,
+    &__right {
+        width: 50%;
+    }
+    &___right {
+        align-self: center;
+        padding: 30px 50px 0 50px;
+    }
+    &__left p {
+        margin-bottom: 60px;
+    }
+    &__left {
+        margin-left: 50px;
+    }
+    &__right img {
+        width: 640px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    &__wrapper {
+        display: flex;
+        gap: 30px;
+    }
+}
