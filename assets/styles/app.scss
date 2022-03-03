@@ -1,3 +1,6 @@
+// Helpers
+@import './helpers/mixins.scss';
+
 // Variables
 @import './utils/variables';
 @import './utils/global';
@@ -9,4 +12,5 @@
 // Components
 @import './components/header';
 @import './components/navbar';
+// Homepage components
 @import './components/homepage/about';
