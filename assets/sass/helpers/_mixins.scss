@@ -16,6 +16,10 @@
 		@media (min-width: 1280px) {
 			@content;
 		}
+	} @else {
+		@media (min-width: $size) {
+			@content;
+		}
 	}
 }
 
@@ -35,6 +39,10 @@
 		}
 	} @else if $size == xl {
 		@media (max-width: 1280px) {
+			@content;
+		}
+	} @else {
+		@media (max-width: $size) {
 			@content;
 		}
 	}
