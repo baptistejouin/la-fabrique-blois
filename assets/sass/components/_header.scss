@@ -1,6 +1,9 @@
 .header {
 	display: flex;
 	align-items: center;
+	@include before(lg) {
+		flex-direction: column;
+	}
 
 	&__title {
 		margin-bottom: 44px;
@@ -12,12 +15,18 @@
 	&__left,
 	&__right {
 		flex: 1;
+		@include before(md) {
+			width: 100%;
+		}
 	}
 	&__right {
 		display: flex;
 		justify-content: flex-end;
 
 		img {
+			@include before(md) {
+				width: 100%;
+			}
 			width: 540px;
 			height: 400px;
 			object-fit: cover;

@@ -27,6 +27,12 @@ p {
 h1 {
 	font-weight: 600;
 	font-size: 60px;
+	@include before(lg) {
+		font-size: 50px;
+	}
+	@include before(md) {
+		font-size: 40px;
+	}
 }
 button {
 	cursor: pointer;

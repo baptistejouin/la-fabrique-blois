@@ -7,6 +7,10 @@
 
 	&__item {
 		font-size: 16px;
+		@include before(md) {
+			// TODO: setup responsive navbar
+			display: none;
+		}
 		// font: black sans opacitée
 		// opacity: 60%;
 	}
