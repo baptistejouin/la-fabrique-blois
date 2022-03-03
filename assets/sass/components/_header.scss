@@ -36,12 +36,22 @@
 		}
 	}
 	&__right {
+		display: flex;
+		justify-content: flex-end;
+		@include before(lg) {
+			justify-content: center;
+		}
 		img {
+			// max-width: 500px;
+			max-width: 100%;
 			width: 40vw;
 			height: 400px;
 			object-fit: cover;
 			border-radius: 16px;
 
+			@include after(1500px) {
+				max-width: 580px;
+			}
 			@include before(lg) {
 				width: 600px;
 			}

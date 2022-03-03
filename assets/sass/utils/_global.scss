@@ -18,24 +18,35 @@
 body {
 	font-family: Poppins;
 	font-weight: 400;
+	color: $noir;
 }
 p {
-	font-weight: 400;
 	font-size: 16px;
-	color: rgba(#000, 0.6);
+	color: $noir-60;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
 }
 h1 {
-	font-weight: 600;
-	font-size: 60px;
+	font-size: 64px;
 	@include before(lg) {
-		font-size: 50px;
+		font-size: 48px;
 	}
 	@include before(md) {
-		font-size: 40px;
+		font-size: 38px;
 	}
 	@include before(sm) {
 		font-size: 36px;
 	}
+}
+h2 {
+	font-size: 36px;
+	margin-bottom: 48px;
 }
 button {
 	cursor: pointer;
