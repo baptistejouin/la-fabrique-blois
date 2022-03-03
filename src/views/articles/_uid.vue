@@ -19,21 +19,19 @@
 		</details>
 		<br />
 	</main>
-	<four-o-four v-else-if="error" />
+	<not-found v-else-if="error" />
 </template>
 <script setup>
 import { useRoute } from 'vue-router';
 import { usePrismicDocumentByUID } from '@prismicio/vue';
 
-import FourOFour from '@/components/FourOFour.vue';
-import ParagraphSlice from '@/slices/ParagraphSlice.vue';
-import GrilleImageSlice from '@/slices/GrilleImageSlice.vue';
+import NotFound from '@/components/NotFound.vue';
+import ArticleSection from '@/slices/ArticleSection.vue';
+import ImageGrid from '@/slices/ImageGrid.vue';
 
 const route = useRoute();
-
 const { data: article, error } = usePrismicDocumentByUID('articles', route.params.uid);
-// Handle if no article -> 404 page
-const components = { paragraphe: ParagraphSlice, grille_d_image: GrilleImageSlice };
+const components = { paragraphe: ArticleSection, grille_d_image: ImageGrid };
 </script>
 
 <style>

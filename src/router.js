@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"
+import NotFound from '@/components/NotFound.vue'
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -11,6 +12,12 @@ const router = createRouter({
 		},
 		{
 			path: "/articles/:uid", name: "article", component: () => import("@/views/articles/_uid.vue")
+		},
+		{
+			path: '/:pathMatch(.*)*',
+			alias: '/404',
+			name: 'NotFound',
+			component: NotFound
 		},
 	]
 })

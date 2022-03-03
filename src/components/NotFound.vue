@@ -1,6 +1,6 @@
 <template>
-	<main class="container block">
-		<h1>404 - Stable Not Found</h1>
+	<main>
+		<h1>404 - Not Found</h1>
 		<router-link to="/">Back to home ></router-link>
 	</main>
 </template>
