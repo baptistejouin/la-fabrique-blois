@@ -1,0 +1,30 @@
+.header {
+	display: flex;
+	align-items: center;
+
+	&__title {
+		margin-bottom: 44px;
+	}
+	&__description {
+		margin-bottom: 22px;
+	}
+
+	&__left,
+	&__right {
+		flex: 1;
+	}
+	&__right {
+		// padding: 30px 50px 0 50px;
+		display: flex;
+		justify-content: flex-end;
+
+		img {
+			width: 540px;
+			height: 400px;
+			object-fit: cover;
+			border-radius: 16px;
+		}
+	}
+	&__left {
+	}
+}

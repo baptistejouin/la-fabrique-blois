@@ -1,51 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/styles/app.scss" />
+		<title>La Fabrique - Accueil</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles/app.scss">
-    <title>La Fabrique - Accueil</title>
-</head>
+	<body>
+		<nav class="container navbar">
+			<div class="navbar__logo" href=""><img src="./assets/img/logos/logo_fabrique.svg" /></div>
+			<div class="navbar__item">À propos</div>
+			<div class="navbar__item">Évènements</div>
+			<div class="navbar__item">Réservation</div>
+			<div class="navbar__item">Contact</div>
+		</nav>
 
-<body>
-    <nav class="navbar">
-        <div class="navbar__logo" href=""><img src="./assets/img/logos/logo_fabrique.svg"></div>
-        <div class="navbar__item">À propos</div>
-        <div class="navbar__item">Évènements</div>
-        <div class="navbar__item">Réservation</div>
-        <div class="navbar__item">Contact</div>
-    </nav>
+		<header class="container header">
+			<div class="header__left">
+				<h1 class="header__title">
+					La Fabrique,<br />
+					pour les jeunes
+				</h1>
+				<p class="header__description">Centre d'activités collectives, de création et d'accueil à destination des jeunes blésois</p>
+				<div class="btn__wrapper">
+					<button class="btn">Je visite en 360° !</button>
+					<button class="btn btn--secondary">Je réserve une salle</button>
+				</div>
+			</div>
+			<div class="header__right">
+				<img src="/assets/img/content/salle_video.jpg" />
+			</div>
+		</header>
 
-    <header class="container header">
-        <div class="header__left">
-            <h1>La Fabrique,<br> pour les jeunes</h1>
-            <p>Centre d'activités collectives, de création et d'accueil à destination des jeunes blésois</p>
-            <div class="header__wrapper">
-                <button class="btn">Je visite en 360° !</button>
-                <button class="btn secondaire">Je réserve une salle</button>
-            </div>
-        </div>
-        <div class="header__right">
-            <img src="/assets/img/content/salle_video.jpg">
-        </div>
-    </header>
-
-    <section class="container about">
-
-        <div class="about__left">
-            <div class="about__line"><img src="./assets/img/icones/icon_phone.svg">+33 6 29 31 73 09</div>
-            <div class="about__line"><img src="./assets/img/icones/icon_mail.svg">hello@lafabrique-blois.fr</div>
-            <div class="about__line"><img src="./assets/img/icones/icon_pinpoint.svg">7 rue d'Auvergne, 41000 Blois</div>
-            <div class="about__line"><img src="./assets/img/icones/icon_calendar.svg">Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</div>
-        </div>
-        <div class="about__right">
-            hdb
-        </div>
-
-    </section>
-
-
-</body>
-
+		<section class="container about section-mt">
+			<div class="about__left">
+				<div class="about__line"><img src="./assets/img/icones/icon_phone.svg" />+33 6 29 31 73 09</div>
+				<div class="about__line"><img src="./assets/img/icones/icon_mail.svg" />hello@lafabrique-blois.fr</div>
+				<div class="about__line"><img src="./assets/img/icones/icon_pinpoint.svg" />7 rue d'Auvergne, 41000 Blois</div>
+				<div class="about__line"><img src="./assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</div>
+			</div>
+			<div class="about__right"></div>
+		</section>
+	</body>
 </html>

@@ -1,15 +1,21 @@
 .btn {
-    appearance: none;
-    padding: 11px 24px;
-    border-radius: 16px;
-    border: none;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 16px;
-    background-color: $vertfab;
-    color: white;
-    &.secondaire {
-        background-color: rgba($vertfab, 0.2);
-        color: $vertfab;
-    }
+	appearance: none;
+	padding: 11px 24px;
+	border-radius: 16px;
+	border: none;
+	font-family: Poppins;
+	font-weight: 500;
+	font-size: 16px;
+	background-color: $vertfab;
+	color: white;
+
+	&__wrapper {
+		display: flex;
+		gap: 30px;
+	}
+
+	&--secondary {
+		background-color: rgba($vertfab, 0.2);
+		color: $vertfab;
+	}
 }
