@@ -1,7 +1,12 @@
 // Desktop-first approach
 @mixin after($size) {
     //A declarer du plus grand au plus petit
-    @if $size==sm {
+    @if $size==xs {
+        @media (min-width: 375px) {
+            @content;
+        }
+    }
+    @else if $size==sm {
         @media (min-width: 640px) {
             @content;
         }
@@ -31,7 +36,12 @@
 // Mobile-first approach
 @mixin before($size) {
     //A declarer du plus petit au plus grand
-    @if $size==sm {
+    @if $size==xs {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+    @else if $size==sm {
         @media (max-width: 640px) {
             @content;
         }
