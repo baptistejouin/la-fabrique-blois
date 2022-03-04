@@ -5,7 +5,7 @@
 	&__slider {
 		display: flex;
 		gap: 64px;
-		overflow-x: visible;
+		overflow-x: scroll;
 	}
 
 	&__card {

@@ -13,6 +13,7 @@
 		display: flex;
 		align-items: center;
 		@include before(lg) {
+			min-width: auto;
 			width: 100%;
 		}
 	}
@@ -30,6 +31,11 @@
 		display: flex;
 		align-items: center;
 		gap: 24px;
+		@include before(xs) {
+			flex-direction: column;
+			gap: 10px;
+			text-align: center;
+		}
 	}
 	&__right {
 		display: inline;
