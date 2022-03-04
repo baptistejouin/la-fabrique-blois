@@ -1,15 +1,19 @@
 .btn {
-	display: inline-block;
+	display: inline;
+	text-align: center;
 	padding: 11px 24px;
 	border-radius: 16px;
 	background-color: $vert;
 	color: white;
 
+	@include before(sm) {
+		display: block;
+	}
+
 	&__wrapper {
 		display: flex;
 		gap: 30px;
 		@include before(sm) {
-			text-align: center;
 			flex-direction: column;
 			gap: 14px;
 		}
