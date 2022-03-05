@@ -1,0 +1,32 @@
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 38px;
+
+	&__title {
+		text-align: center;
+		font-size: 24px;
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+	&__input {
+		font: inherit;
+		background-color: $vert-7;
+		border: 0;
+		padding: 6px 64px;
+		width: 450px;
+		text-align: center;
+		border-radius: 8px;
+		
+		@include before(md) {
+			width: 100%;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+
+		&::placeholder {
+			color: $vert-60;
+		}
+	}
+}
