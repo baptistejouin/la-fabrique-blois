@@ -20,12 +20,12 @@
 		}
 	}
 	&__question-container {
-		padding: 18px 24px;
+		padding: 14px 16px;
 		border: 1px solid $noir-15;
 		border-radius: 16px;
 
 		@include before(sm) {
-			padding: 14px 16px;
+			padding: 12px 14px;
 		}
 
 		&--is-open {

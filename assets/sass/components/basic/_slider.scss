@@ -1,0 +1,26 @@
+.slider {
+	display: flex;
+	gap: 64px;
+	overflow: scroll;
+
+	&-control {
+		display: flex;
+		gap: 16px;
+	}
+	&-prev,
+	&-next {
+		cursor: pointer;
+		width: 38px;
+		aspect-ratio: 1/1;
+		@include before(sm) {
+			width: 32px;
+		}
+	}
+	&-prev {
+		transform: scaleX(-1);
+	}
+	&--disable {
+		opacity: .6;
+		cursor: not-allowed;
+	}
+}
