@@ -5,9 +5,21 @@
 	&__slider {
 		display: flex;
 		gap: 64px;
-		overflow-x: visible;
+		overflow-x: scroll;
 	}
-
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 48px;
+		@include before(sm) {
+			font-size: 24px;
+			margin-bottom: 36px;
+		}
+	}
+	&__title {
+		margin-bottom: 0;
+	}
 	&__card {
 		display: flex;
 		flex-direction: column;
