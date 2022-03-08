@@ -1,26 +1,23 @@
 .btn {
-	display: inline;
-	text-align: center;
-	padding: 11px 24px;
-	border-radius: 16px;
-	background-color: $vert;
-	color: white;
-
-	@include before(sm) {
-		display: block;
-	}
-
-	&__wrapper {
-		display: flex;
-		gap: 30px;
-		@include before(sm) {
-			flex-direction: column;
-			gap: 14px;
-		}
-	}
-
-	&--secondary {
-		background-color: $vert-20;
-		color: $vert;
-	}
+    display: inline-block;
+    text-align: center;
+    padding: 11px 24px;
+    border-radius: 16px;
+    background-color: $vert;
+    color: white;
+    @include before(sm) {
+        display: block;
+    }
+    &__wrapper {
+        display: flex;
+        gap: 30px;
+        @include before(sm) {
+            flex-direction: column;
+            gap: 14px;
+        }
+    }
+    &--secondary {
+        background-color: $vert-20;
+        color: $vert;
+    }
 }
