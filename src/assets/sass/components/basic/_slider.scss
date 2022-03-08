@@ -1,0 +1,32 @@
+.slider {
+	display: flex;
+	align-items: center;
+	gap: 64px;
+
+	img {
+		width: 100%;
+		max-height: 200px;
+		object-fit: contain;
+	}
+
+	&-control {
+		display: flex;
+		gap: 16px;
+
+		[disabled] {
+			opacity: .6;
+			cursor: not-allowed;
+		}
+	}
+	&-prev,
+	&-next {
+		width: 38px;
+		aspect-ratio: 1/1;
+		@include before(sm) {
+			width: 32px;
+		}
+	}
+	&-prev {
+		transform: scaleX(-1);
+	}
+}

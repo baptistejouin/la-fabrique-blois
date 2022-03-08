@@ -1,0 +1,23 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	gap: 48px;
+	margin-top: 37px;
+	margin-bottom: 37px;
+
+	&__item {
+		font-size: 16px;
+		color: $noir-60;
+		@include before(md) {
+			// TODO: setup responsive navbar
+			display: none;
+		}
+		&--active {
+			font-weight: 500;
+			color: $noir;
+		}
+	}
+	&__logo img {
+		height: 89px;
+	}
+}

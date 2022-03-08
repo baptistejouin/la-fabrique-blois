@@ -1,0 +1,63 @@
+.event {
+	display: flex;
+	flex-direction: column;
+
+	&__slider {
+		display: flex;
+		// gap: 64px;
+		// overflow-x: scroll;
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 48px;
+		@include before(sm) {
+			font-size: 24px;
+			margin-bottom: 36px;
+		}
+	}
+	&__title {
+		margin-bottom: 0;
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		// max-width: 450px;
+
+		@include before(sm) {
+			max-width: 100%;
+		}
+
+		&-img {
+			object-fit: cover;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 9;
+			border-radius: 16px;
+			margin-bottom: 12px;
+			box-shadow: 0px 0px 20px 3px $noir-5;
+		}
+		&-date {
+			color: $vert;
+			font-size: 12px;
+		}
+		&-title {
+			font-weight: 500;
+			margin-bottom: 6px;
+		}
+		&-description {
+			color: $noir-60;
+			font-size: 14px;
+		}
+	}
+	&__call-to-action {
+		display: flex;
+		justify-content: center;
+		margin-top: 48px;
+
+		@include before(sm) {
+			display: block;
+		}
+	}
+}

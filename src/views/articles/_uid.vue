@@ -1,4 +1,5 @@
 <template>
+<router-link to="/">Home</router-link>
 	<main v-if="article">
 		<h1>{{ $prismic.asText(article.data.title) }}</h1>
 		<p>{{ $prismic.asText(article.data.short_description) }}</p>
@@ -34,9 +35,10 @@ const { data: article, error } = usePrismicDocumentByUID('articles', route.param
 const components = { paragraphe: ArticleSection, grille_d_image: ImageGrid };
 </script>
 
-<style>
+<style scoped>
 img {
-	max-width: 400px;
+	max-width: 500px;
+	width: 100%;
 	height: auto;
 }
 </style>
