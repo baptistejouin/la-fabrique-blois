@@ -33,7 +33,6 @@ export default {
 		isToggle(i) {
 			return this.faqOpen.includes(i);
 		}
-	},
-	computed: {}
+	}
 };
 </script>

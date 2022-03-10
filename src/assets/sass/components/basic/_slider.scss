@@ -14,18 +14,21 @@
 		gap: 16px;
 
 		[disabled] {
-			opacity: .6;
+			opacity: 0.6;
 			cursor: not-allowed;
 		}
 	}
+
 	&-prev,
 	&-next {
 		width: 38px;
 		aspect-ratio: 1/1;
+
 		@include before(sm) {
 			width: 32px;
 		}
 	}
+
 	&-prev {
 		transform: scaleX(-1);
 	}

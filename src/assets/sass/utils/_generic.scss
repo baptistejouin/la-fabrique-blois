@@ -4,25 +4,29 @@
  *	Ici, tout ce qui est générique, pour définir une classe qui sera réutilisée.
  *	Seulement des class on évite de rentrer dans le détail, c'est composant peuvent être utilisé un peu partout.
  *	Cette fiche de style a pour but de définir les cas qui se répètent, comme pour un container.
- *	
+ *
  */
 
 .container {
-	width: min(130ch, 100vw - 2rem);
-	margin: 0 auto;
-	padding: 0 1rem;
+  width: min(130ch, 100vw - 2rem);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
+
 // Le margin-top qui permet de séparer deux sections
 .section-mt {
-	margin-top: 125px;
+  margin-top: 125px;
 }
+
 .green-touch {
-	color: $vert;
+  color: $vert;
 }
+
 .visibility-hidden {
-	position: absolute !important;
-	height: 1px; width: 1px; 
-	overflow: hidden;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-  }
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}

@@ -21,16 +21,28 @@
 		<section class="container about section-mt">
 			<div class="about__left">
 				<div class="about__info">
-					<div class="about__line"><img src="@/assets/img/icones/icon_phone.svg" />{{ $prismic.asText(home.data.phone) }}</div>
-					<div class="about__line"><img src="@/assets/img/icones/icon_mail.svg" />{{ $prismic.asText(home.data.email) }}</div>
-					<div class="about__line"><img src="@/assets/img/icones/icon_pinpoint.svg" />{{ $prismic.asText(home.data.adress) }}</div>
-					<div class="about__line"><img src="@/assets/img/icones/icon_calendar.svg" />{{ $prismic.asText(home.data.opening_days) }}</div>
+					<div class="about__line">
+						<img src="@/assets/img/icones/icon_phone.svg" />
+						{{ $prismic.asText(home.data.phone) }}
+					</div>
+					<div class="about__line">
+						<img src="@/assets/img/icones/icon_mail.svg" />
+						{{ $prismic.asText(home.data.email) }}
+					</div>
+					<div class="about__line">
+						<img src="@/assets/img/icones/icon_pinpoint.svg" />
+						{{ $prismic.asText(home.data.adress) }}
+					</div>
+					<div class="about__line">
+						<img src="@/assets/img/icones/icon_calendar.svg" />
+						{{ $prismic.asText(home.data.opening_days) }}
+					</div>
 				</div>
 			</div>
 			<div class="about__right">
 				<h2>{{ $prismic.asText(home.data.what_is_title) }}</h2>
 				<prismic-rich-text :field="home.data.what_is_content" />
-				<router-link :to="{name: 'about'}" class="btn">Dites m'en plus !</router-link>
+				<router-link :to="{ name: 'about' }" class="btn">Dites m'en plus !</router-link>
 			</div>
 		</section>
 		<section class="event section-mt">
@@ -55,39 +67,39 @@
 			</div>
 		</section>
 		<section class="faq container section-mt">
-		<h2>{{ $prismic.asText(home.data.faq_title) }}</h2>
-		<div class="faq__content">
-			<div class="faq__left">
-				<faq-item :items="home.data.faq_content"/>
-			</div>
-			<div class="faq__right">
-				<div class="faq__right-container">
-					<img class="faq__question-icon" src="@/assets/img/icones/icon_help.svg" alt="" />
-					<h3>Tu as encore des questions&nbsp;?</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum.</p>
-					<a href="#" class="btn">Nous contacter</a>
+			<h2>{{ $prismic.asText(home.data.faq_title) }}</h2>
+			<div class="faq__content">
+				<div class="faq__left">
+					<faq-item :items="home.data.faq_content" />
+				</div>
+				<div class="faq__right">
+					<div class="faq__right-container">
+						<img class="faq__question-icon" src="@/assets/img/icones/icon_help.svg" alt />
+						<h3>Tu as encore des questions&nbsp;?</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum.</p>
+						<a href="#" class="btn">Nous contacter</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 		<foot />
-
 		<!-- Only for debug -->
 		<!-- <br />
 		<details>
 			<summary>Réponse JSON</summary>
 			<pre>{{ home }}</pre>
-		</details> -->
+		</details>-->
 	</template>
+	<template v-else-if="error">Error when loading, please retry.</template>
 </template>
 <script setup>
-import { usePrismicDocumentsByType, useSinglePrismicDocument } from '@prismicio/vue';
+import { usePrismicDocumentsByType, useSinglePrismicDocument } from '@prismicio/vue'
 
-import Navbar from '@/components/Navbar.vue';
-import Foot from '@/components/Footer/Footer.vue';
-import FaqItem from '@/components/Homepage/FaqItem.vue';
-import EventSlider from '@/components/Homepage/EventSlider.vue';
+import Navbar from '@/components/Navbar.vue'
+import Foot from '@/components/Footer/Footer.vue'
+import FaqItem from '@/components/Homepage/FaqItem.vue'
+import EventSlider from '@/components/Homepage/EventSlider.vue'
 
-const { data: home } = useSinglePrismicDocument('home');
-const { data: articles } = usePrismicDocumentsByType('articles');
+const { data: home } = useSinglePrismicDocument('home')
+const { data: articles, error } = usePrismicDocumentsByType('articles')
 </script>

@@ -1,22 +1,27 @@
 .about {
 	display: flex;
 	gap: 180px;
+
 	@include before(xl) {
 		gap: 90px;
 	}
+
 	@include before(lg) {
 		flex-direction: column;
 		gap: 48px;
 	}
+
 	&__left {
 		min-width: 450px;
 		display: flex;
 		align-items: center;
+
 		@include before(lg) {
 			min-width: auto;
 			width: 100%;
 		}
 	}
+
 	&__info {
 		padding: 36px;
 		background-color: $vert-7;
@@ -27,22 +32,26 @@
 		gap: 24px;
 		width: 100%;
 	}
+
 	&__line {
 		display: flex;
 		align-items: center;
 		gap: 24px;
+
 		@include before(xs) {
 			flex-direction: column;
 			gap: 10px;
 			text-align: center;
 		}
 	}
+
 	&__right {
 		display: inline;
 
 		p {
 			margin-bottom: 1em;
 		}
+
 		p ~ p {
 			margin-bottom: 48px;
 		}

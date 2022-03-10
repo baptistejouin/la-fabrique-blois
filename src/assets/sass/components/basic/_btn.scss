@@ -14,6 +14,7 @@
 	&__wrapper {
 		display: flex;
 		gap: 30px;
+
 		@include before(sm) {
 			flex-direction: column;
 			gap: 14px;
