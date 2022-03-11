@@ -11,6 +11,7 @@ Projet tuteuré de 2ème année de MMI, création d'un site dynamique pour un cl
 - [Maquette Figma](https://www.figma.com/file/RVMGkGsQVUgLzOgSqs0YnP/UI-%2F-La-Fabrique?node-id=33%3A2)
 
 <hr>
+
 ## La Stack
 
 [Vue 3](https://v3.vuejs.org/) + [Vite](https://vitejs.dev/) + [Prismic](https://prismic.io/) + [Sass](https://sass-lang.com/)
