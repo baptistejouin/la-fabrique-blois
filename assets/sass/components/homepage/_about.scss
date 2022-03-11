@@ -1,9 +1,11 @@
 .about {
 	display: flex;
 	gap: 180px;
+
 	@include before(xl) {
 		gap: 90px;
 	}
+
 	@include before(lg) {
 		flex-direction: column;
 		gap: 48px;
@@ -12,6 +14,7 @@
 		min-width: 450px;
 		display: flex;
 		align-items: center;
+
 		@include before(lg) {
 			min-width: auto;
 			width: 100%;
@@ -31,6 +34,7 @@
 		display: flex;
 		align-items: center;
 		gap: 24px;
+
 		@include before(xs) {
 			flex-direction: column;
 			gap: 10px;
@@ -40,11 +44,11 @@
 	&__right {
 		display: inline;
 
-		p {
-			margin-bottom: 1em;
+		p + p {
+			margin-top: 1em;
 		}
-		p ~ p {
-			margin-bottom: 48px;
+		a:last-child {
+			margin-top: 3em;
 		}
 	}
 }

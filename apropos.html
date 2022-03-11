@@ -1,141 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/sass/app.scss" />
+		<title>La Fabrique - Accueil</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/sass/app.scss" />
-    <title>La Fabrique - Accueil</title>
-</head>
+	<body>
+		<header class="container header__background-green">
+			<nav class="navbar">
+				<div class="navbar__logo" href="">
+					<a href="#"><img src="./assets/img/logos/logo_fabrique.svg" /></a>
+				</div>
+				<div class="navbar__item navbar__item--active"><a href="#">À propos</a></div>
+				<div class="navbar__item"><a href="#">Évènements</a></div>
+				<div class="navbar__item"><a href="#">Réservation</a></div>
+				<div class="navbar__item"><a href="#">Contact</a></div>
+			</nav>
 
-<body>
-    <header class="container">
-        <nav class="navbar">
-            <div class="navbar__logo" href="">
-                <a href="#"><img src="./assets/img/logos/logo_fabrique.svg" /></a>
-            </div>
-            <div class="navbar__item"><a href="#">À propos</a></div>
-            <div class="navbar__item"><a href="#">Évènements</a></div>
-            <div class="navbar__item"><a href="#">Réservation</a></div>
-            <div class="navbar__item"><a href="#">Contact</a></div>
-        </nav>
+			<ul class="breadcrumb">
+				<li class="breadcrumb__item">
+					<a href="#">Accueil</a>
+				</li>
+				<li class="breadcrumb__item">
+					<a href="#">À propos</a>
+				</li>
+			</ul>
+			<div class="rooms__header">
+				<h1 class="rooms__title">À propos<span class="green-touch">.</span></h1>
+				<div class="slider-control">
+					<button aria-label="Previous slide" title="Previous slide">
+						<img class="slider-prev" src="./assets/img/icones/icon_arrow.svg" alt="Previous slide icon" />
+					</button>
+					<button aria-label="Next slide" title="Next slide">
+						<img class="slider-next" src="./assets/img/icones/icon_arrow.svg" alt="Next slide icon" />
+					</button>
+				</div>
+			</div>
+			<div class="rooms__slider">
+				<a class="rooms__card">
+					<h3 class="rooms__card-title">Le hall</h3>
+					<img class="rooms__card-img" src="./assets/img/content/lehall.jpg" alt="" />
+				</a>
+				<a class="rooms__card">
+					<h3 class="rooms__card-title">La cafétéria</h3>
+					<img class="rooms__card-img" src="./assets\img\content\lehall.jpg" alt="" />
+				</a>
+				<a class="rooms__card">
+					<h3 class="rooms__card-title">Le hall</h3>
+					<img class="rooms__card-img" src="./assets/img/content/salle_video.jpg" alt="" />
+				</a>
+				<a class="rooms__card">
+					<h3 class="rooms__card-title">Salle de danse</h3>
+					<img class="rooms__card-img" src="./assets/img/content/salle_video.jpg" alt="" />
+				</a>
+			</div>
+		</header>
+		<main>
+			<section class="container about section-mt">
+				<div class="about__right">
+					<h2>La Fabrique, c’est quoi&nbsp;<span class="green-touch">?</span></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
+				</div>
+				<div class="about__left">
+					<div class="about__info">
+						<div class="about__line"><img src="./assets/img/icones/icon_phone.svg" />+33 6 29 31 73 09</div>
+						<div class="about__line"><img src="./assets/img/icones/icon_mail.svg" />hello@lafabrique-blois.fr</div>
+						<div class="about__line"><img src="./assets/img/icones/icon_pinpoint.svg" />7 rue d'Auvergne, 41000 Blois</div>
+						<div class="about__line"><img src="./assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</div>
+					</div>
+				</div>
+			</section>
 
-        <div class="rooms__header">
-            <h1 class="rooms__title">À propos<span class="green-touch">.</span></h1>
-            <div class="slider-control">
-                <button aria-label="Previous slide" aria-disabled="true" title="Previous slide">
-                        <img class="slider-prev slider--disable" src="./assets/img/icones/icon_arrow.svg" alt="Previous slide icon" />
-                    </button>
-                <button aria-label="Next slide" aria-disabled="false" title="Next slide">
-                        <img class="slider-next" src="./assets/img/icones/icon_arrow.svg" alt="Next slide icon" />
-                    </button>
-            </div>
-        </div>
-        <div class="rooms__slider">
-            <a class="rooms__card">
-                <h3 class="rooms__card-title">Le hall</h3>
-                <img class="rooms__card-img" src="./assets/img/content/lehall.jpg" alt="" />
-            </a>
-            <a class="rooms__card">
-                <h3 class="rooms__card-title">La cafétéria</h3>
-                <img class="rooms__card-img" src="./assets\img\content\lehall.jpg" alt="" />
+			<section class="container members section-mt">
+				<div class="members__portraits">
+					<img class="members__portraits-img" src="./assets/img/content/members/abdellah.jpg" />
+					<img class="members__portraits-img" src="./assets/img/content/members/hanan.jpg" />
+					<img class="members__portraits-img" src="./assets/img/content/members/steve.jpg" />
+					<img class="members__portraits-img" src="./assets/img/content/members/yannick.jpg" />
+					<img class="members__portraits-img" src="./assets/img/content/members/rosa.jpg" />
+				</div>
+				<div class="members__description">
+					<h2>Qui sommes nous ?</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
+					<div class="btn__wrapper">
+						<a href="#" class="btn">Je prends contact</a>
+						<a href="#" class="btn btn--secondary">Je rejoins La Fabrique</a>
+					</div>
+				</div>
+			</section>
 
-            </a>
-            <a class="rooms__card">
-                <h3 class="rooms__card-title">Le hall</h3>
-                <img class="rooms__card-img" src="./assets/img/content/salle_video.jpg" alt="" />
-
-            </a>
-            <a class="rooms__card">
-                <h3 class="rooms__card-title">Salle de danse</h3>
-                <img class="rooms__card-img" src="./assets/img/content/salle_video.jpg" alt="" />
-
-            </a>
-        </div>
-
-    </header>
-
-    <section class="container about section-mt">
-        <div class="about__right">
-            <h2>La Fabrique, c’est quoi&nbsp;<span class="green-touch">?</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
-
-        </div>
-        <div class="about__left">
-            <div class="about__info">
-                <div class="about__line"><img src="./assets/img/icones/icon_phone.svg" />+33 6 29 31 73 09</div>
-                <div class="about__line"><img src="./assets/img/icones/icon_mail.svg" />hello@lafabrique-blois.fr</div>
-                <div class="about__line"><img src="./assets/img/icones/icon_pinpoint.svg" />7 rue d'Auvergne, 41000 Blois</div>
-                <div class="about__line"><img src="./assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="container members section-mt">
-        <div class="members__portraits">
-            <img class="members__portraits-img" src="./assets/img/content/members/abdellah.jpg">
-            <img class="members__portraits-img" src="./assets/img/content/members/hanan.jpg">
-            <img class="members__portraits-img" src="./assets/img/content/members/steve.jpg">
-            <img class="members__portraits-img" src="./assets/img/content/members/yannick.jpg">
-            <img class="members__portraits-img" src="./assets/img/content/members/rosa.jpg">
-
-        </div>
-        <div class="members__description">
-            <h2>La Fabrique, c’est quoi&nbsp;<span class="green-touch">?</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum. Praesent vel laoreet tellus. Ut mattis pretium est, eu consequat lacus feugiat eu.</p>
-            <div class="btn__wrapper">
-                <a href="#" class="btn">Je prends contact</a>
-                <a href="#" class="btn btn--secondary">Je rejoins La Fabrique</a>
-            </div>
-        </div>
-    </section>
-
-
-    <footer class="footer">
-        <h2 class="visibility-hidden">Toute les pages importantes de La Fabrique ainsi que nos réseaux sociaux.</h2>
-        <div class="footer__wrapper container">
-            <div class="footer__info">
-                <img src="./assets/img/logos/logo_fabrique.svg" alt="">
-                <p>Centre d’activités collectives, de création et d’accueil à destination des jeunes blésois.</p>
-            </div>
-            <div class="footer__links">
-                <div>
-                    <h3 class="footer__link-title">La structure</h3>
-                    <ul class="footer__link-list">
-                        <li class="footer__link-item"><a href="#">À propos</a></li>
-                        <li class="footer__link-item"><a href="#">Événements</a></li>
-                        <li class="footer__link-item"><a href="#">Réservation</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer__link-title">Informations</h3>
-                    <ul class="footer__link-list">
-                        <li class="footer__link-item"><a href="#">Nous rejoindre</a></li>
-                        <li class="footer__link-item"><a href="#">Contact</a></li>
-                        <li class="footer__link-item"><a href="#">Mentions Légales</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="footer__link-title">Nous trouver</h3>
-                    <ul class="footer__link-list">
-                        <li class="footer__link-item"><img src="./assets/img/icones/icon_pinpoint.svg">7 Rue d'Auvergne, 41000 Blois</li>
-                        <li class="footer__link-item"><img src="./assets/img/icones/icon_calendar.svg">Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__social">
-                <h3>Suivez-nous sur&nbsp;:</h3>
-                <div class="footer__social-list">
-                    <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/icones/icon_instagram.svg" alt=""></a>
-                    <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/icones/icon_facebook.svg" alt=""></a>
-                    <a href="http://snapchat.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/icones/icon_snapchat.svg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-
+			<section class="newsletter container section-mt">
+				<h2 class="newsletter__title">Reste informé de nos actualités, inscris-toi à notre newsletter&nbsp;:</h2>
+				<input class="newsletter__input" type="text" placeholder="ex. mon-adresse@mail.com" />
+			</section>
+			<section class="partners section-mt">
+				<div class="container">
+					<div class="partners__header">
+						<h2 class="partners__title">Nos partenaires<span class="green-touch">.</span></h2>
+						<div class="slider-control">
+							<button aria-label="Previous slide" aria-disabled="true" title="Previous slide">
+								<img class="slider-prev slider--disable" src="./assets/img/icones/icon_arrow.svg" alt="Previous slide icon" />
+							</button>
+							<button aria-label="Next slide" aria-disabled="false" title="Next slide">
+								<img class="slider-next" src="./assets/img/icones/icon_arrow.svg" alt="Next slide icon" />
+							</button>
+						</div>
+					</div>
+					<div class="slider">
+						<img src="./assets/img/logos/logo_blois.svg" alt="Logo de la ville de Blois" />
+						<img src="./assets/img/logos/logo_val-de-loire.svg" alt="Logo de la ville de Blois" />
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<h2 class="visibility-hidden">Toute les pages importantes de La Fabrique ainsi que nos réseaux sociaux.</h2>
+			<div class="footer__wrapper container">
+				<div class="footer__info">
+					<img src="./assets/img/logos/logo_fabrique.svg" alt="" />
+					<p>Centre d’activités collectives, de création et d’accueil à destination des jeunes blésois.</p>
+				</div>
+				<div class="footer__links">
+					<div>
+						<h3 class="footer__link-title">La structure</h3>
+						<ul class="footer__link-list">
+							<li class="footer__link-item"><a href="#">À propos</a></li>
+							<li class="footer__link-item"><a href="#">Événements</a></li>
+							<li class="footer__link-item"><a href="#">Réservation</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="footer__link-title">Informations</h3>
+						<ul class="footer__link-list">
+							<li class="footer__link-item"><a href="#">Nous rejoindre</a></li>
+							<li class="footer__link-item"><a href="#">Contact</a></li>
+							<li class="footer__link-item"><a href="#">Mentions Légales</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="footer__link-title">Nous trouver</h3>
+						<ul class="footer__link-list">
+							<li class="footer__link-item"><img src="./assets/img/icones/icon_pinpoint.svg" />7 Rue d'Auvergne, 41000 Blois</li>
+							<li class="footer__link-item"><img src="./assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__social">
+					<h3>Suivez-nous sur&nbsp;:</h3>
+					<div class="footer__social-list">
+						<a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/icones/icon_instagram.svg" alt="" /></a>
+						<a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/icones/icon_facebook.svg" alt="" /></a>
+						<a href="http://snapchat.com" target="_blank" rel="noopener noreferrer"><img src="./assets/img/icones/icon_snapchat.svg" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>

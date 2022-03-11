@@ -1,37 +1,46 @@
 //reste margin sur portraits
 .members {
-    display: flex;
-    gap: 180px;
-    @include before(xl) {
-        gap: 90px;
-    }
-    @include before(lg) {
-        flex-direction: column;
-        gap: 48px;
-    }
-    &__portraits {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 150px);
-        gap: 10px;
-        justify-content: center;
-        @include before(sm) {
-            grid-template-columns: repeat(2, 150px);
-        }
-        &-img {
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 100%;
-            max-width: 150px;
-        }
-    }
-    &__description {
-        display: inline;
-        p {
-            margin-bottom: 1em;
-        }
-        p~p {
-            margin-bottom: 48px;
-        }
-    }
+	display: flex;
+	justify-content: space-between;
+	gap: 32px;
+
+	@include before(lg) {
+		flex-direction: column;
+		gap: 48px;
+	}
+	&__portraits {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(3, 150px);
+		gap: 32px;
+
+		@include before(lg) {
+			gap: 24px;
+			display: flex;
+			// justify-content: space-evenly;
+			flex-wrap: wrap;
+		}
+
+		&-img {
+			aspect-ratio: 1/1;
+			object-fit: cover;
+			border-radius: 100%;
+			max-width: 150px;
+		}
+	}
+	&__description {
+		max-width: 550px;
+
+		@include before(lg) {
+			max-width: none;
+		}
+
+		p {
+			margin-bottom: 1em;
+		}
+
+		p ~ p {
+			margin-bottom: 48px;
+		}
+	}
 }
