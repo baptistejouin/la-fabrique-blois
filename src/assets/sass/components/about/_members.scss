@@ -1,0 +1,44 @@
+.members {
+	display: flex;
+	justify-content: space-between;
+	gap: 32px;
+
+	@include before(lg) {
+		flex-direction: column;
+		gap: 48px;
+	}
+	&__portraits {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(3, 150px);
+		gap: 32px;
+
+		@include before(lg) {
+			gap: 24px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&-img {
+			aspect-ratio: 1/1;
+			object-fit: cover;
+			border-radius: 100%;
+			max-width: 150px;
+		}
+	}
+	&__description {
+		max-width: 550px;
+
+		@include before(lg) {
+			max-width: none;
+		}
+
+		p {
+			margin-bottom: 1em;
+		}
+
+		p ~ p {
+			margin-bottom: 48px;
+		}
+	}
+}

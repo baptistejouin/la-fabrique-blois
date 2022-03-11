@@ -9,6 +9,7 @@
 // Basics components
 @import './components/basic/btn';
 @import './components/basic/slider';
+@import './components/basic/breadcrumb';
 
 // Components
 @import './components/header';
@@ -21,3 +22,7 @@
 @import './components/homepage/event';
 @import './components/homepage/faq';
 @import './components/homepage/partners';
+
+// About page components
+@import './components/about/rooms';
+@import './components/about/members';

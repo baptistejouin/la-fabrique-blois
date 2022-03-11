@@ -3,11 +3,15 @@ import NotFound from '@/components/NotFound.vue'
 
 const router = createRouter({
 	history: createWebHistory(),
+	linkActiveClass: 'navbar__item--active',
 	routes: [
 		{
 			path: '/',
 			name: 'index',
-			component: () => import('@/views/index.vue')
+			component: () => import('@/views/index.vue'),
+			meta: {
+				title: 'Page d\'accueil | La Fabrique',
+			}
 		},
 		{
 			path: '/articles',
@@ -22,7 +26,10 @@ const router = createRouter({
 		{
 			path: '/a-propos',
 			name: 'about',
-			component: () => import('@/views/about.vue')
+			component: () => import('@/views/about.vue'),
+			meta: {
+				title: 'À propos | La Fabrique',
+			}
 		},
 		// {
 		//  path: "/reservation", name: "reservation", component: () => import("@/views/reservation.vue")
@@ -34,9 +41,17 @@ const router = createRouter({
 			path: '/:pathMatch(.*)*',
 			alias: '/404',
 			name: 'NotFound',
-			component: NotFound
+			component: NotFound,
+			meta: {
+				title: '404 | La Fabrique',
+			}
 		}
 	]
+})
+
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title || 'La Fabrique'
+    next()
 })
 
 export default router

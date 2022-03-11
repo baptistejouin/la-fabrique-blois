@@ -10,25 +10,25 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: $noir;
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: $noir;
 
-  @include before(sm) {
-    font-size: 14px;
-  }
+	@include before(sm) {
+		font-size: 14px;
+	}
 }
 
 p {
-  font-size: 1rem;
-  color: $noir-60;
+	font-size: 1rem;
+	color: $noir-60;
 }
 
 h1,
@@ -37,47 +37,53 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 h1 {
-  font-size: 64px;
+	font-size: 64px;
 
-  @include before(lg) {
-    font-size: 48px;
-  }
+	@include before(lg) {
+		font-size: 48px;
+	}
 
-  @include before(md) {
-    font-size: 38px;
-  }
+	@include before(md) {
+		font-size: 38px;
+	}
 
-  @include before(sm) {
-    font-size: 36px;
-  }
+	@include before(sm) {
+		font-size: 36px;
+	}
 }
 
 h2 {
-  font-size: 36px;
-  margin-bottom: 48px;
+	font-size: 36px;
+	margin-bottom: 48px;
 
-  @include before(sm) {
-    font-size: 24px;
-    margin-bottom: 36px;
-  }
+	@include before(sm) {
+		font-size: 24px;
+		margin-bottom: 36px;
+	}
 }
 
 button {
-  cursor: pointer;
-  appearance: none;
-  border: none;
-  background: none;
+	cursor: pointer;
+	appearance: none;
+	border: none;
+	background: none;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
+}
+
+ol,
+li {
+	color: $noir-60;
+	padding-left: 1em;
 }

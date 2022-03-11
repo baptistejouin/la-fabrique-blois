@@ -1,15 +1,12 @@
 <template>
-	<main>
+	<main class="container">
 		<h1>404 - Not Found</h1>
-		<router-link to="/">Back to home ></router-link>
+		<router-link to="/">Retour à la page d'accueil ></router-link>
 	</main>
 </template>
-
 <style scoped>
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: calc(100vh - 300px);
+	margin-top: 25vh;
+	text-align: center;
 }
 </style>
