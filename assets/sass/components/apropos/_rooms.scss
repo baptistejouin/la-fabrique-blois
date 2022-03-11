@@ -1,0 +1,65 @@
+.rooms {
+    display: flex;
+    flex-direction: column;
+    &__slider {
+        display: flex;
+        gap: 64px;
+        overflow-x: scroll;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 48px;
+        @include before(sm) {
+            font-size: 24px;
+            margin-bottom: 36px;
+        }
+    }
+    &__title {
+        margin-bottom: 0;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+        position: relative;
+        box-shadow: inset 0px 110px 76px -81px $noir-60;
+        border-radius: 16px;
+        @include before(sm) {
+            max-width: 100%;
+        }
+        &-img {
+            border-radius: 16px;
+            margin-bottom: 12px;
+            aspect-ratio: 6/5;
+            object-fit: cover;
+            position: relative;
+            z-index: -1;
+        }
+        &-title {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-weight: 400;
+            z-index: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin-top: 12px;
+        }
+        //horizontal bar after card title
+        &-title:after {
+            display: block;
+            position: absolute;
+            transform: translate(-50%, 50%);
+            left: 50%;
+            bottom: 0;
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: white;
+        }
+    }
+}
