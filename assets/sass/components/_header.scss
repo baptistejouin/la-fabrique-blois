@@ -1,7 +1,6 @@
 .header {
 	display: flex;
 	align-items: center;
-	position: relative;
 
 	@include before(lg) {
 		flex-direction: column;
@@ -72,7 +71,8 @@
 			display: block;
 			background-color: $vert-7;
 			width: 100%;
-			height: 75%;
+			height: 130vw;
+			max-height: 625px;
 			position: absolute;
 			inset: 0;
 		}
