@@ -1,5 +1,6 @@
 <template>
-	<template v-if="home">
+	<loader v-if="state === 'pending'" />
+	<template v-else-if="home">
 		<header class="container">
 			<navbar />
 			<div class="header">
@@ -17,7 +18,6 @@
 				</div>
 			</div>
 		</header>
-
 		<section class="container about section-mt">
 			<div class="about__left">
 				<div class="about__info">
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 				<template v-if="articles">
-					<event-slider :articles="articles.results" />
+					<event-slider :articles="articles" />
 				</template>
 			</div>
 			<div class="container event__call-to-action">
@@ -87,19 +87,20 @@
 		<!-- <br />
 		<details>
 			<summary>Réponse JSON</summary>
-			<pre>{{ home }}</pre>
+			<pre>{{ articles }}</pre>
 		</details>-->
 	</template>
 	<template v-else-if="error">Error when loading, please retry.</template>
 </template>
 <script setup>
-import { usePrismicDocumentsByType, useSinglePrismicDocument } from '@prismicio/vue'
+import { useAllPrismicDocumentsByType, useSinglePrismicDocument } from '@prismicio/vue'
 
+import Loader from '@/components/Loader.vue'
 import Navbar from '@/components/Navbar.vue'
 import Foot from '@/components/Footer/Footer.vue'
 import FaqItem from '@/components/Homepage/FaqItem.vue'
 import EventSlider from '@/components/Homepage/EventSlider.vue'
 
-const { data: home } = useSinglePrismicDocument('home')
-const { data: articles, error } = usePrismicDocumentsByType('articles')
+const { data: home, error, state } = useSinglePrismicDocument('home')
+const { data: articles } = useAllPrismicDocumentsByType('articles')
 </script>

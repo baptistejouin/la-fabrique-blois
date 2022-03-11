@@ -4,15 +4,7 @@
 			<div class="rooms__card">
 				<h3 class="rooms__card-title">{{ $prismic.asText(room.label) }}</h3>
 				<div class="rooms__card-img-container">
-					<img
-						class="rooms__card-img"
-						:src="
-							asImageSrc(room.img, {
-								h: 600
-							})
-						"
-						:alt="room.img.alt"
-					/>
+					<prismic-image class="rooms__card-img" :field="room.img" :imgix-params="{ h: 600 }" />
 				</div>
 			</div>
 		</template>
@@ -20,7 +12,6 @@
 </template>
 <script>
 import { tns } from 'tiny-slider'
-import { asImageSrc } from '@prismicio/helpers'
 
 export default {
 	props: ['rooms'],
@@ -29,9 +20,6 @@ export default {
 		return {
 			roomSlider: undefined
 		}
-	},
-	methods: {
-		asImageSrc
 	},
 	mounted() {
 		this.roomSlider = tns({

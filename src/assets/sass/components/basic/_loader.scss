@@ -1,0 +1,20 @@
+.loader {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	&__svg {
+		z-index: 10;
+		width: 72px;
+		height: 72px;
+	}
+	&__title {
+		color: #000;
+		margin-top: 2rem;
+	}
+}

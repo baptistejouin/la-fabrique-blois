@@ -1,54 +1,28 @@
 <template>
 	<div class="gallery">
 		<prismic-rich-text class="gallery__title" :field="slice.primary.optional_title" />
-		<prismic-rich-text class="gallery__subtitle" v-if="slice.primary.optional_subtitle" :field="slice.primary.optional_subtitle" />
+		<prismic-rich-text
+			class="gallery__subtitle"
+			v-if="slice.primary.optional_subtitle"
+			:field="slice.primary.optional_subtitle"
+		/>
 		<div class="gallery__wrapper" id="slider">
-			<prismic-image class="gallery__img" :field="item.image" v-for="(item, i) in slice.items"
-				:key="i" />
-			<!-- <img
+			<prismic-image
+				class="gallery__img"
+				:field="item.image"
 				v-for="(item, i) in slice.items"
 				:key="i"
-				class="gallery__img"
-				:src="
-					asImageSrc(item.image, {
-						w: 350,
-						h: 350,
-						px: 15
-					})
-				"
-				:alt="item.image.alt"
-			/> -->
+			/>
 		</div>
 	</div>
 </template>
 <script>
-import { getSliceComponentProps } from '@prismicio/vue';
-// import { asImageSrc } from '@prismicio/helpers';
-// import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
+import { getSliceComponentProps } from '@prismicio/vue'
 
 export default {
-	props: getSliceComponentProps(),
-	// methods: {
-	// 	asImageSrc
-	// },
-	// mounted() {
-	// 	const slider = tns({
-	// 		container: '#slider',
-	// 		items: 2,
-	// 		mouseDrag: true,
-	// 		controls: false,
-	// 		nav: false,
-	// 		responsive: {
-	// 			0: {
-	// 				items: 1
-	// 			},
-	// 			700: {
-	// 				items: 2
-	// 			}
-	// 		}
-	// 	});
-	// }
-};
+	// The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
+	props: getSliceComponentProps(["slice", "index", "slices", "context"])
+}
 </script>
 
 <style>
@@ -73,5 +47,8 @@ export default {
 	max-width: 300px;
 	object-fit: contain;
 }
-.tns-visually-hidden{position:absolute;left:-10000em}
+.tns-visually-hidden {
+	position: absolute;
+	left: -10000em;
+}
 </style>

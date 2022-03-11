@@ -1,13 +1,15 @@
 <template>
 	<div class="slider" id="js-partner-slider">
 		<template v-for="(partner, i) in partners.data.partners" :key="i">
-			<a :href="$prismic.asText(partner.url)" target="_blank" rel="noopener noreferrer" :title="$prismic.asText(partner.label)">
-				<img
-					:src="
-						asImageSrc(partner.thumbnail, {
-							h: 350
-						})
-					"
+			<a
+				:href="$prismic.asText(partner.url)"
+				target="_blank"
+				rel="noopener noreferrer"
+				:title="$prismic.asText(partner.label)"
+			>
+				<prismic-image
+					:field="partner.thumbnail"
+					:imgix-params="{ h: 350 }"
 					:alt="$prismic.asText(partner.label)"
 				/>
 			</a>
@@ -15,8 +17,7 @@
 	</div>
 </template>
 <script>
-import { tns } from 'tiny-slider';
-import { asImageSrc } from '@prismicio/helpers';
+import { tns } from 'tiny-slider'
 
 export default {
 	props: ['partners'],
@@ -24,10 +25,7 @@ export default {
 	data() {
 		return {
 			partnerSlider: undefined
-		};
-	},
-	methods: {
-		asImageSrc
+		}
 	},
 	mounted() {
 		this.partnerSlider = tns({
@@ -52,10 +50,10 @@ export default {
 					items: 5
 				}
 			}
-		});
+		})
 	},
 	unmounted() {
-		this.partnerSlider.destroy();
+		this.partnerSlider.destroy()
 	}
-};
+}
 </script>

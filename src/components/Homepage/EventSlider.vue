@@ -2,15 +2,14 @@
 	<div class="event__slider" id="js-articles-slider">
 		<template v-for="(article, i) in articles" :key="i">
 			<prismic-link :field="article" class="event__card">
-				<img class="event__card-img"
-				:src="
-					asImageSrc(article.data.thumbnail, {
-						h: 450
-					})
-				"
-				:alt="article.data.thumbnail.alt" />
-
-				<div class="event__card-date">{{ new Date(article.first_publication_date).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+				<prismic-image
+					class="event__card-img"
+					:field="article.data.thumbnail"
+					:imgix-params="{ h: 450 }"
+				/>
+				<div
+					class="event__card-date"
+				>{{ $prismic.asDate(article.first_publication_date).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
 				<h3 class="event__card-title">{{ $prismic.asText(article.data.title) }}</h3>
 				<p class="event__card-description">{{ $prismic.asText(article.data.short_description) }}</p>
 			</prismic-link>
@@ -18,8 +17,7 @@
 	</div>
 </template>
 <script>
-import { tns } from 'tiny-slider';
-import { asImageSrc } from '@prismicio/helpers';
+import { tns } from 'tiny-slider'
 
 export default {
 	props: ['articles'],
@@ -28,9 +26,6 @@ export default {
 		return {
 			eventSlider: undefined
 		}
-	},
-	methods: {
-		asImageSrc
 	},
 	mounted() {
 		this.eventSlider = tns({
@@ -52,10 +47,10 @@ export default {
 					items: 3
 				}
 			}
-		});
+		})
 	},
 	unmounted() {
 		this.eventSlider.destroy()
 	},
-};
+}
 </script>
