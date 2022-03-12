@@ -1,6 +1,6 @@
 <template>
-	<loader v-if="state === 'pending'" />
-	<template v-else-if="home">
+	<loader v-if="homeState === 'pending' || articlesState === 'pending'" />
+	<template v-else-if="home && articles">
 		<header class="container">
 			<navbar />
 			<div class="header">
@@ -90,17 +90,18 @@
 			<pre>{{ articles }}</pre>
 		</details>-->
 	</template>
-	<template v-else-if="error">Error when loading, please retry.</template>
+	<error v-else-if="homeError || articlesError" />
 </template>
 <script setup>
 import { useAllPrismicDocumentsByType, useSinglePrismicDocument } from '@prismicio/vue'
 
+import Error from '@/components/Error.vue'
 import Loader from '@/components/Loader.vue'
 import Navbar from '@/components/Navbar.vue'
 import Foot from '@/components/Footer/Footer.vue'
 import FaqItem from '@/components/Homepage/FaqItem.vue'
 import EventSlider from '@/components/Homepage/EventSlider.vue'
 
-const { data: home, error, state } = useSinglePrismicDocument('home')
-const { data: articles } = useAllPrismicDocumentsByType('articles')
+const { data: home, error: homeError, state: homeState } = useSinglePrismicDocument('home')
+const { data: articles, error: articlesError, state: articlesState } = useAllPrismicDocumentsByType('articles')
 </script>

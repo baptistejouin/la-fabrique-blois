@@ -1,5 +1,5 @@
 <template>
-	<loader v-if="state === 'pending'" />
+	<loader v-if="homeState === 'pending' || aboutState === 'pending'" />
 	<template v-else-if="about && home">
 		<header class="container">
 			<navbar />
@@ -73,16 +73,18 @@
 		</main>
 		<foot />
 	</template>
+	<error v-else-if="homeError || aboutError" />
 </template>
 
 <script setup>
 import { useSinglePrismicDocument } from '@prismicio/vue'
 
+import Error from '@/components/Error.vue'
 import Loader from '@/components/Loader.vue'
 import Navbar from '@/components/Navbar.vue'
 import Foot from '@/components/Footer/Footer.vue'
 import RoomsSlider from '@/components/About/RoomsSlider.vue'
 
-const { data: home } = useSinglePrismicDocument('home')
-const { data: about, state } = useSinglePrismicDocument('about')
+const { data: home, state: homeState, error: homeError } = useSinglePrismicDocument('home')
+const { data: about, state: aboutState, error: aboutError } = useSinglePrismicDocument('about')
 </script>

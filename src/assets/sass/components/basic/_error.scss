@@ -1,4 +1,4 @@
-.loader {
+.error {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -8,15 +8,17 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	width: min(50ch, 100vw - 2rem);
 
 	&__svg {
 		z-index: 10;
-		width: 72px;
-		height: 72px;
+		width: 48px;
+		height: 48px;
 		color: $vert;
 	}
+
 	&__title {
-		color: #000;
-		margin-top: 2rem;
+		font-size: 24px;
+		margin-top: 1rem;
 	}
 }
