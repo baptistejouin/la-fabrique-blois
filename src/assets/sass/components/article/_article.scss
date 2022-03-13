@@ -1,0 +1,118 @@
+.article {
+	&__title {
+		max-width: 1000px;
+
+		@include before(sm) {
+			line-height: 40px;
+			font-size: 32px;
+		}
+	}
+	&__date {
+		margin-top: 12px;
+		font-size: 18px;
+		color: $vert;
+	}
+	&__keywords {
+		padding: 64px 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 14px 12px;
+
+		@include before(sm) {
+			padding: 32px 0;
+		}
+	}
+	&__keyword {
+		padding: 6px 18px;
+		border-radius: 6px;
+		background-color: $vert;
+		color: white;
+	}
+	&__container {
+		width: min(100ch, 100vw - 2rem);
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	&__section {
+		p,
+		li,
+		a {
+			// font-size: 16px;
+			line-height: 1.7em;
+			// color: rgb(58, 58, 58);
+			text-align: justify;
+			// max-width: min(90ch, 100vw - 2rem);
+		}
+		* + * {
+			margin-top: 1em;
+		}
+		a {
+			color: $vert;
+			text-decoration: underline;
+		}
+		strong {
+			color: $vert;
+		}
+		li {
+			list-style: disc;
+		}
+	}
+	&__heading2,
+	&__heading3 {
+		margin-bottom: 1rem;
+	}
+	&__heading3 {
+		color: $vert;
+	}
+	&__image-block {
+		width: 100%;
+		max-width: 400px;
+		border-radius: 8px;
+	}
+	&__banner-img {
+		width: 100%;
+		// max-width: 800px;
+		border-radius: 16px;
+	}
+	&__banner-subtitle {
+		margin-bottom: 1em;
+		a {
+			color: $vert;
+			text-decoration: underline;
+		}
+	}
+	&__embed-yt > iframe {
+		border-radius: 16px;
+		width: 100%;
+		// max-width: 800px;
+		aspect-ratio: 16/9;
+		height: fit-content;
+	}
+	&__mt {
+		margin-top: 100px;
+	}
+	&__grid-wp {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, calc(100% / 3 - 24px));
+		gap: 24px;
+		justify-content: center;
+
+		@include before(lg) {
+			grid-template-columns: repeat(auto-fill, calc(100% / 2 - 24px));
+		}
+		@include before(sm) {
+			grid-template-columns: repeat(auto-fill, 100%);
+		}
+
+		// display: flex;
+		// flex-wrap: wrap;
+		// gap: 16px;
+	}
+	&__grid-img {
+		width: 100%;
+		// width: calc(33% - 8px);
+		object-fit: contain;
+		border-radius: 8px;
+	}
+}

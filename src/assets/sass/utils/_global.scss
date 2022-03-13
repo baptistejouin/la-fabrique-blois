@@ -20,14 +20,9 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	color: $noir;
-
-	@include before(sm) {
-		font-size: 14px;
-	}
 }
 
 p {
-	font-size: 1rem;
 	color: $noir-60;
 }
 
@@ -41,7 +36,7 @@ h6 {
 }
 
 h1 {
-	font-size: 64px;
+	font-size: 54px;
 
 	@include before(lg) {
 		font-size: 48px;
@@ -83,7 +78,7 @@ ul {
 }
 
 ol,
-li {
+ul {
 	color: $noir-60;
 	padding-left: 1em;
 }

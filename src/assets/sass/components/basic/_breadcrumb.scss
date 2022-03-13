@@ -3,6 +3,10 @@
 	margin: 32px 0;
 	padding: 0.2rem 0;
 
+	@include before(sm) {
+		margin-top: 0;
+	}
+
 	&__item {
 		color: #66758c;
 		display: inline-block;
