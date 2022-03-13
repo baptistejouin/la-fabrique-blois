@@ -34,11 +34,6 @@
 			<slice-zone :slices="article.data.body" :components="components" />
 		</main>
 		<foot />
-		<br />
-		<details>
-			<summary>Réponse JSON</summary>
-			<pre>{{ article }}</pre>
-		</details>
 	</template>
 
 	<not-found v-else-if="error" />

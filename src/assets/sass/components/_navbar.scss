@@ -1,26 +1,89 @@
 .navbar {
+	padding-top: 37px;
+	padding-bottom: 37px;
 	display: flex;
 	align-items: center;
 	gap: 48px;
-	padding-top: 37px;
-	padding-bottom: 37px;
+
+	@include before(md) {
+		justify-content: space-between;
+	}
+
+	&__full {
+		display: flex;
+		@include before(md) {
+			display: none;
+			z-index: 20;
+			flex-direction: column;
+			justify-content: center;
+			margin-top: -64px;
+			position: fixed;
+			inset: 0;
+			background-color: $vert;
+		}
+		&--mobile-active {
+			display: flex;
+		}
+	}
+
+	&__items {
+		display: flex;
+		align-items: center;
+		gap: 48px;
+		padding-left: 0;
+
+		@include before(md) {
+			flex-direction: column;
+		}
+	}
 
 	&__item {
 		font-size: 16px;
 		color: $noir-60;
 
-		@include before(md) {
-			// TODO: setup responsive navbar
-			display: none;
-		}
-
 		&--active {
 			font-weight: 500;
 			color: $noir;
+		}
+		@include before(md) {
+			color: rgba(white, 0.6);
+			font-size: 24px;
+
+			&--active {
+				color: white;
+			}
 		}
 	}
 
 	&__logo img {
 		height: 89px;
+	}
+
+	&__mobile-only {
+		display: none;
+
+		@include before(md) {
+			display: block;
+		}
+	}
+	&__menu {
+		margin-top: -12px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-weight: 600;
+		font-size: 18px;
+
+		svg {
+			width: 42px;
+			height: 42px;
+		}
+	}
+	&__close {
+		position: fixed;
+		z-index: 20;
+		top: 72px;
+		right: 32px;
+		color: white;
 	}
 }
