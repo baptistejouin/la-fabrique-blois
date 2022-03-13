@@ -10,13 +10,16 @@ const router = createRouter({
 			name: 'index',
 			component: () => import('@/views/index.vue'),
 			meta: {
-				title: 'Page d\'accueil | La Fabrique',
+				title: "Page d'accueil | La Fabrique"
 			}
 		},
 		{
 			path: '/articles',
 			name: 'articles',
-			component: () => import('@/views/articles.vue')
+			component: () => import('@/views/articles/index.vue'),
+			meta: {
+				title: 'Évènements | La Fabrique'
+			}
 		},
 		{
 			path: '/articles/:uid',
@@ -28,30 +31,40 @@ const router = createRouter({
 			name: 'about',
 			component: () => import('@/views/about.vue'),
 			meta: {
-				title: 'À propos | La Fabrique',
+				title: 'À propos | La Fabrique'
 			}
 		},
-		// {
-		//  path: "/reservation", name: "reservation", component: () => import("@/views/reservation.vue")
-		// },
-		// {
-		//  path: "/contact", name: "contact", component: () => import("@/views/contact.vue")
-		// },
+		{
+			path: '/reservation',
+			name: 'reservation',
+			component: () => import('@/views/reservation.vue'),
+			meta: {
+				title: 'Réservation | La Fabrique'
+			}
+		},
+		{
+			path: '/contact',
+			name: 'contact',
+			component: () => import('@/views/contact.vue'),
+			meta: {
+				title: 'Contact | La Fabrique'
+			}
+		},
 		{
 			path: '/:pathMatch(.*)*',
 			alias: '/404',
 			name: 'NotFound',
 			component: NotFound,
 			meta: {
-				title: '404 | La Fabrique',
+				title: '404 | La Fabrique'
 			}
 		}
 	]
 })
 
 router.beforeEach((to, from, next) => {
-    document.title = to.meta.title || 'La Fabrique'
-    next()
+	document.title = to.meta.title || 'La Fabrique'
+	next()
 })
 
 export default router

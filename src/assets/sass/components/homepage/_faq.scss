@@ -69,6 +69,9 @@
 	}
 
 	&__right {
+		position: sticky;
+		top: 10vh;
+		height: fit-content;
 		width: 30%;
 		min-width: 350px;
 		background-color: $vert-7;

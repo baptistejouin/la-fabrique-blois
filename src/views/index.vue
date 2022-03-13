@@ -18,70 +18,72 @@
 				</div>
 			</div>
 		</header>
-		<section class="container about section-mt">
-			<div class="about__left">
-				<div class="about__info">
-					<div class="about__line">
-						<img src="@/assets/img/icones/icon_phone.svg" />
-						{{ $prismic.asText(home.data.phone) }}
-					</div>
-					<div class="about__line">
-						<img src="@/assets/img/icones/icon_mail.svg" />
-						{{ $prismic.asText(home.data.email) }}
-					</div>
-					<div class="about__line">
-						<img src="@/assets/img/icones/icon_pinpoint.svg" />
-						{{ $prismic.asText(home.data.adress) }}
-					</div>
-					<div class="about__line">
-						<img src="@/assets/img/icones/icon_calendar.svg" />
-						{{ $prismic.asText(home.data.opening_days) }}
-					</div>
-				</div>
-			</div>
-			<div class="about__right">
-				<h2>{{ $prismic.asText(home.data.what_is_title) }}</h2>
-				<prismic-rich-text :field="home.data.what_is_content" />
-				<router-link :to="{ name: 'about' }" class="btn">Dites m'en plus !</router-link>
-			</div>
-		</section>
-		<section class="event section-mt">
-			<div class="wrapper container">
-				<div class="event__header">
-					<h2 class="event__title">{{ $prismic.asText(home.data.event_title) }}</h2>
-					<div class="slider-control" id="js-articles-controls-slider">
-						<button aria-label="Previous slide" title="Previous slide">
-							<img class="slider-prev" src="@/assets/img/icones/icon_arrow.svg" alt="Previous slide icon" />
-						</button>
-						<button aria-label="Next slide" title="Next slide">
-							<img class="slider-next" src="@/assets/img/icones/icon_arrow.svg" alt="Next slide icon" />
-						</button>
+		<main>
+			<section class="container about section-mt">
+				<div class="about__left">
+					<div class="about__info">
+						<div class="about__line">
+							<img src="@/assets/img/icones/icon_phone.svg" />
+							{{ $prismic.asText(home.data.phone) }}
+						</div>
+						<div class="about__line">
+							<img src="@/assets/img/icones/icon_mail.svg" />
+							{{ $prismic.asText(home.data.email) }}
+						</div>
+						<div class="about__line">
+							<img src="@/assets/img/icones/icon_pinpoint.svg" />
+							{{ $prismic.asText(home.data.adress) }}
+						</div>
+						<div class="about__line">
+							<img src="@/assets/img/icones/icon_calendar.svg" />
+							{{ $prismic.asText(home.data.opening_days) }}
+						</div>
 					</div>
 				</div>
-				<template v-if="articles">
-					<event-slider :articles="articles" />
-				</template>
-			</div>
-			<div class="container event__call-to-action">
-				<router-link :to="{ name: 'articles' }" class="btn">Événements et actualités</router-link>
-			</div>
-		</section>
-		<section class="faq container section-mt">
-			<h2>{{ $prismic.asText(home.data.faq_title) }}</h2>
-			<div class="faq__content">
-				<div class="faq__left">
-					<faq-item :items="home.data.faq_content" />
+				<div class="about__right">
+					<h2>{{ $prismic.asText(home.data.what_is_title) }}</h2>
+					<prismic-rich-text :field="home.data.what_is_content" />
+					<router-link :to="{ name: 'about' }" class="btn">Dites m'en plus !</router-link>
 				</div>
-				<div class="faq__right">
-					<div class="faq__right-container">
-						<img class="faq__question-icon" src="@/assets/img/icones/icon_help.svg" alt />
-						<h3>Tu as encore des questions&nbsp;?</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum.</p>
-						<a href="#" class="btn">Nous contacter</a>
+			</section>
+			<section class="event section-mt">
+				<div class="wrapper container">
+					<div class="event__header">
+						<h2 class="event__title">{{ $prismic.asText(home.data.event_title) }}</h2>
+						<div class="slider-control" id="js-articles-controls-slider">
+							<button aria-label="Previous slide" title="Previous slide">
+								<img class="slider-prev" src="@/assets/img/icones/icon_arrow.svg" alt="Previous slide icon" />
+							</button>
+							<button aria-label="Next slide" title="Next slide">
+								<img class="slider-next" src="@/assets/img/icones/icon_arrow.svg" alt="Next slide icon" />
+							</button>
+						</div>
+					</div>
+					<template v-if="articles">
+						<event-slider :articles="articles" />
+					</template>
+				</div>
+				<div class="container event__call-to-action">
+					<router-link :to="{ name: 'articles' }" class="btn">Événements et actualités</router-link>
+				</div>
+			</section>
+			<section class="faq container section-mt">
+				<h2>{{ $prismic.asText(home.data.faq_title) }}</h2>
+				<div class="faq__content">
+					<div class="faq__left">
+						<faq-item :items="home.data.faq_content" />
+					</div>
+					<div class="faq__right">
+						<div class="faq__right-container">
+							<img class="faq__question-icon" src="@/assets/img/icones/icon_help.svg" alt />
+							<h3>Tu as encore des questions&nbsp;?</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum.</p>
+							<a href="#" class="btn">Nous contacter</a>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 		<foot />
 		<!-- Only for debug -->
 		<!-- <br />

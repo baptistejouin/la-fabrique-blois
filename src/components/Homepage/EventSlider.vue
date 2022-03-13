@@ -9,7 +9,7 @@
 				/>
 				<div
 					class="event__card-date"
-				>{{ $prismic.asDate(article.first_publication_date).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</div>
+				>{{ $prismic.asDate(article.first_publication_date).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: '2-digit' }) }}</div>
 				<h3 class="event__card-title">{{ $prismic.asText(article.data.title) }}</h3>
 				<p class="event__card-description">{{ $prismic.asText(article.data.short_description) }}</p>
 			</prismic-link>

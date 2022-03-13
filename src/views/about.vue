@@ -1,28 +1,30 @@
 <template>
 	<loader v-if="homeState === 'pending' || aboutState === 'pending'" />
 	<template v-else-if="about && home">
-		<header class="container">
-			<navbar />
-			<ul class="breadcrumb">
-				<li class="breadcrumb__item">
-					<router-link :to="{ name: 'index' }">Accueil</router-link>
-				</li>
-				<li class="breadcrumb__item">
-					<router-link :to="{ name: 'about' }">À propos</router-link>
-				</li>
-			</ul>
-			<div class="rooms__header">
-				<h1 class="rooms__title">À propos</h1>
-				<div class="slider-control" id="js-rooms-controls-slider">
-					<button aria-label="Previous slide" title="Previous slide">
-						<img class="slider-prev" src="@/assets/img/icones/icon_arrow.svg" alt="Previous slide icon" />
-					</button>
-					<button aria-label="Next slide" title="Next slide">
-						<img class="slider-next" src="@/assets/img/icones/icon_arrow.svg" alt="Next slide icon" />
-					</button>
+		<header class="header__background-green header__background-green--80h">
+			<div class="container">
+				<navbar />
+				<ul class="breadcrumb">
+					<li class="breadcrumb__item">
+						<router-link :to="{ name: 'index' }">Accueil</router-link>
+					</li>
+					<li class="breadcrumb__item">
+						<router-link :to="{ name: 'about' }">À propos</router-link>
+					</li>
+				</ul>
+				<div class="rooms__header">
+					<h1 class="rooms__title">À propos</h1>
+					<div class="slider-control" id="js-rooms-controls-slider">
+						<button aria-label="Previous slide" title="Previous slide">
+							<img class="slider-prev" src="@/assets/img/icones/icon_arrow.svg" alt="Previous slide icon" />
+						</button>
+						<button aria-label="Next slide" title="Next slide">
+							<img class="slider-next" src="@/assets/img/icones/icon_arrow.svg" alt="Next slide icon" />
+						</button>
+					</div>
 				</div>
+				<rooms-slider :rooms="about.data.rooms" />
 			</div>
-			<rooms-slider :rooms="about.data.rooms" />
 		</header>
 		<main>
 			<section class="container about section-mt">
