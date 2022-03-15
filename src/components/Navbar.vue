@@ -10,7 +10,7 @@
 			:aria-hidden="!mobileExpended"
 			:aria-expanded="mobileExpended"
 		>
-			<button class="navbar__menu navbar__close navbar__mobile-only" @click="toggleMobileNav()">
+			<button class="navbar__mobile-only navbar__close" @click="toggleMobileNav()">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -71,9 +71,6 @@
 			</button>
 		</div>
 	</nav>
-	<!-- <nav class="navbar__mobile" aria-hidden="true" aria-expanded="false">
-		
-	</nav>-->
 </template>
 
 <script>
