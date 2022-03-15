@@ -94,12 +94,12 @@
 	&__grid-wp {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, calc(100% / 3 - 24px));
+		grid-template-columns: repeat(auto-fill, calc(100% / 3 - 16px));
 		gap: 24px;
 		justify-content: center;
 
 		@include before(lg) {
-			grid-template-columns: repeat(auto-fill, calc(100% / 2 - 24px));
+			grid-template-columns: repeat(auto-fill, calc(100% / 2 - 16px));
 		}
 		@include before(sm) {
 			grid-template-columns: repeat(auto-fill, 100%);
