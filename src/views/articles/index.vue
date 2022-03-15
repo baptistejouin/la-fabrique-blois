@@ -17,6 +17,7 @@
 		<section class="section-mt">LA PAGE DES ARTICLES</section>
 		kljdhfwgsyukq
 		<h1>TEST</h1>
+		<p>dhjkf</p>
 	</main>
 </template>
 <script setup>
