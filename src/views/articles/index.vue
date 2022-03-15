@@ -15,7 +15,8 @@
 	</header>
 	<main class="container">
 		<section class="section-mt">LA PAGE DES ARTICLES</section>
-		kljdhfwgsyukqj
+		kljdhfwgsyukq
+		<h1>TEST</h1>
 	</main>
 </template>
 <script setup>
