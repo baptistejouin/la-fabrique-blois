@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Desktop-first approach
 @mixin after($size) {
 	// A declarer du plus grand au plus petit
@@ -56,4 +58,9 @@
 			@content;
 		}
 	}
+}
+@function rgba2rgb($rgba_color, $rgb_bg: white) {
+	$alpha: color.alpha($rgba_color);
+
+	@return rgb((1 - $alpha) * color.red($rgb_bg) + $alpha * color.red($rgba_color), (1 - $alpha) * color.green($rgb_bg) + $alpha * color.green($rgba_color), (1 - $alpha) * color.blue($rgb_bg) + $alpha * color.blue($rgba_color));
 }

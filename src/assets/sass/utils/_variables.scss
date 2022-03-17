@@ -6,15 +6,19 @@
  *
  */
 
+// Vert
 $vert: #417c79;
-$vert-60: rgba($vert, 0.6);
-$vert-40: rgba($vert, 0.4);
-$vert-20: rgba($vert, 0.2);
-$vert-7: rgba($vert, 0.07);
-$vert-15: rgba($vert, 0.15);
-$vert-5: rgba($vert, 0.05);
+$vert-60: rgba2rgb(rgba($vert, 0.6));
+$vert-40: rgba2rgb(rgba($vert, 0.4));
+$vert-20: rgba2rgb(rgba($vert, 0.2));
+$vert-7: rgba2rgb(rgba($vert, 0.07));
+$vert-15: rgba2rgb(rgba($vert, 0.15));
+$vert-5: rgba2rgb(rgba($vert, 0.05));
+
+// Noir
 $noir: #222222;
+$noir-80: rgba2rgb(rgba($noir, 0.8));
 $noir-60: #717171;
-$noir-15: rgba($noir, 0.15);
-$noir-25: rgba($noir, 0.25);
-$noir-5: rgba($noir, 0.05);
+$noir-15: rgba2rgb(rgba($noir, 0.15));
+$noir-25: rgba2rgb(rgba($noir, 0.25));
+$noir-5: rgba2rgb(rgba($noir, 0.05));
