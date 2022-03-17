@@ -10,13 +10,20 @@
 					<router-link :to="{ name: 'reservation' }">Réservation</router-link>
 				</li>
 			</ul>
-			<div>Réservation / Nous rejoindre</div>
+			<h1>Réservation de salle</h1>
 		</div>
 	</header>
 	<main>
-		<div>
+		<section class="container schedule">
 			<iframe src="https://www.supersaas.fr/schedule/LaFabrique/R%C3%A9servation_de_salles?"></iframe>
-		</div>
+		</section>
+		<section class="container join section-mt">
+			<div class="about__right">
+				<h2>Nous rejoindre</h2>
+				<p>Pour réserver une salle à La Fabrique, vous avez besoin de vous inscrire dans la structure.<br />Pour cela, <strong>remplissez notre fiche</strong> et rendez-vous à La Fabrique pour finaliser votre inscription !</p>
+				<a class="btn" href="src\assets\download\NOM_Prenom_fiche_inscription_lafabrique.pdf" download>Télecharger la fiche d'inscription</a>
+			</div>
+		</section>
 	</main>
 </template>
 <script setup>
