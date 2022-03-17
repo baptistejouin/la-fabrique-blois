@@ -1,11 +1,9 @@
 // Helpers
 @import './helpers/mixins';
-
 // Variables
 @import './utils/variables';
 @import './utils/global';
 @import './utils/generic';
-
 // Basics components
 @import './components/basic/btn';
 @import './components/basic/slider';
@@ -35,3 +33,6 @@
 
 // Contact page components
 @import './components/contact/contact';
+
+// Reservation components
+@import './components/reservation/iframe';

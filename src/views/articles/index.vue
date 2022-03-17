@@ -13,7 +13,9 @@
 			<h1>Évènements et actualités.</h1>
 		</div>
 	</header>
-	<main class="container"></main>
+	<main class="container">
+		<section class="section-mt">LA PAGE DES ARTCLES</section>
+	</main>
 </template>
 <script setup>
 import Navbar from '@/components/Navbar.vue'

@@ -67,8 +67,8 @@
 					<h2>{{ $prismic.asText(about.data.who_we_title) }}</h2>
 					<prismic-rich-text :field="about.data.who_we_content" />
 					<div class="btn__wrapper">
-						<a href="#" class="btn">Je prends contact</a>
-						<a href="#" class="btn btn--secondary">Trouver La Fabrique</a>
+						<router-link :to="{ name: 'contact' }" class="btn">Je prends contact</router-link>
+						<a href="#" class="btn btn--secondary">Je rejoins La Fabrique</a>
 					</div>
 				</div>
 			</section>
