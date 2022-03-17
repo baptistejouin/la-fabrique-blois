@@ -7,7 +7,7 @@
 		<prismic-rich-text
 			v-if="slice.primary.embed_yt_video_description"
 			:field="slice.primary.embed_yt_video_description"
-			class="article__banner-subtitle"
+			class="article__subtitle"
 		/>
 		<prismic-embed class="article__embed-yt" :field="slice.primary.embed_yt_video_url" />
 	</div>

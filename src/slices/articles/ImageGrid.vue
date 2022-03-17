@@ -6,10 +6,10 @@
 		>{{ $prismic.asText(slice.primary.grid_title) }}</h2>
 		<prismic-rich-text
 			v-if="slice.primary.grid_description"
-			class="article__banner-subtitle"
+			class="article__subtitle"
 			:field="slice.primary.grid_description"
 		/>
-		<div class="article__grid-wp" id="slider">
+		<div class="article__grid" id="slider">
 			<prismic-image
 				v-for="(item, i) in slice.items"
 				:key="i"
@@ -24,7 +24,6 @@
 import { getSliceComponentProps } from '@prismicio/vue'
 
 export default {
-	// The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-	props: getSliceComponentProps(["slice", "index", "slices", "context"])
+	props: getSliceComponentProps()
 }
 </script>

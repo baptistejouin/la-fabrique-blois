@@ -6,7 +6,7 @@
 		>{{ $prismic.asText(slice.primary.banner_img_title) }}</h2>
 		<prismic-rich-text
 			v-if="slice.primary.banner_img_subtitle"
-			class="article__banner-subtitle"
+			class="article__subtitle"
 			:field="slice.primary.banner_img_subtitle"
 		/>
 		<prismic-image

@@ -32,21 +32,23 @@
 		width: min(100ch, 100vw - 2rem);
 		margin: 0 auto;
 		padding: 0 1rem;
+
+		p {
+			color: $noir-80;
+		}
 	}
 	&__section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		p,
-		li,
-		a {
-			font-size: 18px;
-			color: rgb(58, 58, 58);
-			line-height: 1.7em;
-			text-align: justify;
-			max-width: min(60ch, 100vw - 2rem);
-		}
+		margin: 0 auto;
+		// p,
+		// li,
+		// a,
+		// strong,
+		// em {
+		line-height: 1.7em;
+		text-align: justify;
+		max-width: min(60ch, 100vw - 2rem);
+		font-size: 18px;
+		// }
 		* + * {
 			margin-top: 1em;
 		}
@@ -58,17 +60,17 @@
 			color: $vert;
 		}
 		li {
-			list-style: disc;
+			list-style: square;
+			margin: 0.2rem 0;
 		}
 	}
 	&__heading2,
 	&__heading3 {
-		margin-bottom: 1rem;
+		margin: 1em 0 0.5em 0;
 	}
 	&__heading3 {
 		color: $vert;
 		font-size: 24px;
-		text-align: center;
 	}
 	&__image-block {
 		width: 100%;
@@ -80,8 +82,10 @@
 		width: 100%;
 		border-radius: 16px;
 	}
-	&__banner-subtitle {
+	&__subtitle {
 		margin-bottom: 1em;
+		font-size: 18px;
+
 		a {
 			color: $vert;
 			text-decoration: underline;
@@ -96,7 +100,7 @@
 	&__mt {
 		margin-top: 100px;
 	}
-	&__grid-wp {
+	&__grid {
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, calc(100% / 3 - 16px));
