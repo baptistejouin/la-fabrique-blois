@@ -1,0 +1,35 @@
+.form {
+	&__label {
+		display: block;
+		padding: 6px 0;
+	}
+	&__input,
+	&__textarea {
+		display: block;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		font: inherit;
+		width: 100%;
+		appearance: none;
+		border-radius: 0.1rem;
+		outline: 0;
+		color: $vert;
+		border: 1px solid $vert-15;
+		background-color: $vert-5;
+		padding: 12px;
+		border-radius: 12px;
+		font-weight: 500;
+
+		&::placeholder {
+			font: inherit;
+			color: $vert-40;
+			font-weight: 400;
+		}
+	}
+	&__submit {
+		padding: 12px 0;
+	}
+	&__group {
+		margin-bottom: 12px;
+	}
+}

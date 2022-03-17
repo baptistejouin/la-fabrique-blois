@@ -12,6 +12,7 @@
 @import './components/basic/breadcrumb';
 @import './components/basic/loader';
 @import './components/basic/error';
+@import './components/basic/form';
 
 // Components
 @import './components/header';
@@ -31,3 +32,6 @@
 
 // Article page components
 @import './components/article/article';
+
+// Contact page components
+@import './components/contact/contact';
