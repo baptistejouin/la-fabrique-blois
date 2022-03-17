@@ -10,6 +10,7 @@
 @import './components/basic/breadcrumb';
 @import './components/basic/loader';
 @import './components/basic/error';
+@import './components/basic/form';
 // Components
 @import './components/header';
 @import './components/navbar';
@@ -25,6 +26,8 @@
 @import './components/about/members';
 // Article page components
 @import './components/article/article';
+// Contact page components
+@import './components/contact/contact';
 // Reservation components
 @import './components/reservation/iframe';
 @import './components/reservation/join';

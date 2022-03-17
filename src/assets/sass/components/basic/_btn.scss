@@ -1,7 +1,8 @@
 .btn {
+	font: inherit;
 	display: inline-block;
 	text-align: center;
-	padding: 11px 24px;
+	padding: 12px 24px;
 	border-radius: 16px;
 	background-color: $vert;
 	color: white;
@@ -9,6 +10,7 @@
 	@include before(sm) {
 		display: block;
 		width: 100%;
+		border-radius: 12px;
 	}
 
 	&__wrapper {

@@ -1,5 +1,5 @@
 <template>
-	<header class="header__background-green header__background-green">
+	<header class="header__background-green">
 		<div class="container">
 			<navbar />
 			<ul class="breadcrumb">
