@@ -56,12 +56,7 @@
 
 			<section class="container members section-mt">
 				<div class="members__portraits">
-					<prismic-image
-						v-for="member in about.data.members"
-						class="members__portraits-img"
-						:field="member.img"
-						:title="$prismic.asText(member.name)"
-					/>
+					<prismic-image v-for="member in about.data.members" class="members__portraits-img" :field="member.img" :title="$prismic.asText(member.name)" />
 				</div>
 				<div class="members__description">
 					<h2>{{ $prismic.asText(about.data.who_we_title) }}</h2>
