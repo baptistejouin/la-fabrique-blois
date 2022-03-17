@@ -68,7 +68,7 @@
 					<prismic-rich-text :field="about.data.who_we_content" />
 					<div class="btn__wrapper">
 						<a href="#" class="btn">Je prends contact</a>
-						<a href="#" class="btn btn--secondary">Je rejoins La Fabrique</a>
+						<a href="#" class="btn btn--secondary">Trouver La Fabrique</a>
 					</div>
 				</div>
 			</section>
