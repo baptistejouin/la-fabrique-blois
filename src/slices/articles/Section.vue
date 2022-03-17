@@ -17,7 +17,7 @@ export default {
 			if (element.type === "heading3")
 				return `<h3 class="article__heading3">${content}</h3>`
 			if (element.type === "image")
-				return `<img class="article__image-block" src="${this.$prismic.asImageSrc(element, { h: 600 })}" alt="${element.alt}">`
+				return `<p><img class="article__image-block" src="${this.$prismic.asImageSrc(element, { h: 600 })}" alt="${element.alt}"></p>`
 
 		}
 	},

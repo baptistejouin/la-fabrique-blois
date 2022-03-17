@@ -85,12 +85,6 @@
 			</section>
 		</main>
 		<foot />
-		<!-- Only for debug -->
-		<!-- <br />
-		<details>
-			<summary>Réponse JSON</summary>
-			<pre>{{ articles }}</pre>
-		</details>-->
 	</template>
 	<error v-else-if="homeError || articlesError" />
 </template>
