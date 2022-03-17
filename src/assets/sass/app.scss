@@ -1,33 +1,29 @@
 // Helpers
 @import './helpers/mixins';
-
 // Variables
 @import './utils/variables';
 @import './utils/global';
 @import './utils/generic';
-
 // Basics components
 @import './components/basic/btn';
 @import './components/basic/slider';
 @import './components/basic/breadcrumb';
 @import './components/basic/loader';
 @import './components/basic/error';
-
 // Components
 @import './components/header';
 @import './components/navbar';
 @import './components/newsletter';
 @import './components/footer';
-
 // Homepage components
 @import './components/homepage/about';
 @import './components/homepage/event';
 @import './components/homepage/faq';
 @import './components/homepage/partners';
-
 // About page components
 @import './components/about/rooms';
 @import './components/about/members';
-
 // Article page components
 @import './components/article/article';
+// Reservation components
+@import './components/reservation/iframe';

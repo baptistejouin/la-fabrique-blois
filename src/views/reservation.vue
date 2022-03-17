@@ -13,7 +13,11 @@
 			<div>Réservation / Nous rejoindre</div>
 		</div>
 	</header>
-	<main></main>
+	<main>
+		<div>
+			<iframe src="https://www.supersaas.fr/schedule/LaFabrique/R%C3%A9servation_de_salles?"></iframe>
+		</div>
+	</main>
 </template>
 <script setup>
 import Navbar from '@/components/Navbar.vue'

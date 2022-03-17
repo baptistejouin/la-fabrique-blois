@@ -56,18 +56,13 @@
 
 			<section class="container members section-mt">
 				<div class="members__portraits">
-					<prismic-image
-						v-for="member in about.data.members"
-						class="members__portraits-img"
-						:field="member.img"
-						:title="$prismic.asText(member.name)"
-					/>
+					<prismic-image v-for="member in about.data.members" class="members__portraits-img" :field="member.img" :title="$prismic.asText(member.name)" />
 				</div>
 				<div class="members__description">
 					<h2>{{ $prismic.asText(about.data.who_we_title) }}</h2>
 					<prismic-rich-text :field="about.data.who_we_content" />
 					<div class="btn__wrapper">
-						<a href="#" class="btn">Je prends contact</a>
+						<router-link :to="{ name: 'contact' }" class="btn">Je prends contact</router-link>
 						<a href="#" class="btn btn--secondary">Je rejoins La Fabrique</a>
 					</div>
 				</div>
