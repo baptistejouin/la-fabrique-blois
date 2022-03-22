@@ -36,15 +36,17 @@
 					<div class="about__info">
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_phone.svg" />
-							{{ $prismic.asText(home.data.phone) }}
+							<a href="tel:+33629317309">{{ $prismic.asText(home.data.phone) }}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_mail.svg" />
-							{{ $prismic.asText(home.data.email) }}
+							<a href="mailto:hello@lafabrique-blois.fr">{{ $prismic.asText(home.data.email) }}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_pinpoint.svg" />
-							{{ $prismic.asText(home.data.adress) }}
+							<a href="https://www.google.com/maps/place/La+Fabrique/@47.5941184,1.3336332,16z/data=!4m9!1m2!2m1!1sla+fabrique+blois!3m5!1s0x47e4a8061cf4a189:0xb28fb2df5099ea60!8m2!3d47.5941812!4d1.3377737!15sChFsYSBmYWJyaXF1ZSBibG9pc5IBEXJlY3JlYXRpb25fY2VudGVy">{{
+								$prismic.asText(home.data.adress)
+							}}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_calendar.svg" />
@@ -63,7 +65,7 @@
 					<prismic-rich-text :field="about.data.who_we_content" />
 					<div class="btn__wrapper">
 						<router-link :to="{ name: 'contact' }" class="btn">Je prends contact</router-link>
-						<a href="#" class="btn btn--secondary">Je rejoins La Fabrique</a>
+						<router-link :to="{ name: 'reservation' }" class="btn btn--secondary">Je rejoins La Fabrique</router-link>
 					</div>
 				</div>
 			</section>

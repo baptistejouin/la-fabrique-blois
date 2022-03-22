@@ -15,7 +15,7 @@
 	</header>
 	<main>
 		<section class="container schedule">
-			<iframe src="https://www.supersaas.fr/schedule/LaFabrique/R%C3%A9servation_de_salles?"></iframe>
+			<iframe class="schedule__iframe" src="https://www.supersaas.fr/schedule/LaFabrique/R%C3%A9servation_de_salles?"></iframe>
 		</section>
 		<section class="container join section-mt">
 			<div class="about__right">
@@ -25,7 +25,9 @@
 			</div>
 		</section>
 	</main>
+	<foot />
 </template>
 <script setup>
 import Navbar from '@/components/Navbar.vue'
+import Foot from '@/components/Footer/Footer.vue'
 </script>

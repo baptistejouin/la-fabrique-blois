@@ -27,22 +27,11 @@
 				</div>
 				<div class="form__group">
 					<label class="form__label" for="email">Votre adresse mail</label>
-					<input
-						class="form__input"
-						type="email"
-						id="email"
-						placeholder="ex. adresse@email.com"
-						required
-					/>
+					<input class="form__input" type="email" id="email" placeholder="ex. adresse@email.com" required />
 				</div>
 				<div class="form__group">
 					<label class="form__label" for="message">Message</label>
-					<textarea
-						class="form__textarea"
-						id="message"
-						placeholder="ex. Bonjour, je vous contact à propos de..."
-						required
-					></textarea>
+					<textarea class="form__textarea" id="message" placeholder="ex. Bonjour, je vous contacte à propos de..." required></textarea>
 				</div>
 				<div class="form__submit">
 					<button class="btn">Soumettre mon message</button>
@@ -50,19 +39,21 @@
 			</div>
 			<div class="contact__right">
 				<div class="contact__info">
-					<div class="contact__line">
+					<div class="about__line">
 						<img src="@/assets/img/icones/icon_phone.svg" />
-						{{ $prismic.asText(home.data.phone) }}
+						<a href="tel:+33629317309">{{ $prismic.asText(home.data.phone) }}</a>
 					</div>
-					<div class="contact__line">
+					<div class="about__line">
 						<img src="@/assets/img/icones/icon_mail.svg" />
-						{{ $prismic.asText(home.data.email) }}
+						<a href="mailto:hello@lafabrique-blois.fr">{{ $prismic.asText(home.data.email) }}</a>
 					</div>
-					<div class="contact__line">
+					<div class="about__line">
 						<img src="@/assets/img/icones/icon_pinpoint.svg" />
-						{{ $prismic.asText(home.data.adress) }}
+						<a href="https://www.google.com/maps/place/La+Fabrique/@47.5941184,1.3336332,16z/data=!4m9!1m2!2m1!1sla+fabrique+blois!3m5!1s0x47e4a8061cf4a189:0xb28fb2df5099ea60!8m2!3d47.5941812!4d1.3377737!15sChFsYSBmYWJyaXF1ZSBibG9pc5IBEXJlY3JlYXRpb25fY2VudGVy">{{
+							$prismic.asText(home.data.adress)
+						}}</a>
 					</div>
-					<div class="contact__line">
+					<div class="about__line">
 						<img src="@/assets/img/icones/icon_calendar.svg" />
 						{{ $prismic.asText(home.data.opening_days) }}
 					</div>
@@ -86,5 +77,4 @@ import { useSinglePrismicDocument } from '@prismicio/vue'
 import Navbar from '@/components/Navbar.vue'
 import Foot from '@/components/Footer/Footer.vue'
 const { data: home, error: homeError, state: homeState } = useSinglePrismicDocument('home')
-
 </script>
