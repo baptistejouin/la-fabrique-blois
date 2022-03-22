@@ -10,8 +10,6 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src')
         }
     },
-    publicDir: "./",
-    root: "./",
     base: "./",
 
 })
