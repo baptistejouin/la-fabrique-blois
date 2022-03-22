@@ -1,0 +1,44 @@
+.articles {
+	&__grid {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, calc(100% / 3 - 16px));
+		column-gap: 24px;
+		row-gap: 64px;
+		justify-content: center;
+		margin-top: 64px;
+
+		@include before(lg) {
+			grid-template-columns: repeat(auto-fill, calc(100% / 2 - 16px));
+		}
+		@include before(sm) {
+			grid-template-columns: repeat(auto-fill, 100%);
+		}
+	}
+	&__container {
+		width: 100%;
+	}
+	&__thumbnail {
+		aspect-ratio: 1.25/1;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 16px;
+
+		@include before(sm) {
+			border-radius: 6px;
+		}
+	}
+	&__date {
+		color: $vert;
+		font-size: 12px;
+	}
+	&__title {
+		font-weight: 600;
+		margin-bottom: 6px;
+		font-size: 24px;
+	}
+	&__description {
+		color: $noir-60;
+		font-size: 14px;
+	}
+}

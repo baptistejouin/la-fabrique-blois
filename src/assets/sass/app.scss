@@ -11,6 +11,7 @@
 @import './components/basic/loader';
 @import './components/basic/error';
 @import './components/basic/form';
+@import './components/basic/paginate';
 // Components
 @import './components/header';
 @import './components/navbar';
@@ -31,3 +32,5 @@
 // Reservation components
 @import './components/reservation/iframe';
 @import './components/reservation/join';
+// Articles page components
+@import './components/articles/articles';

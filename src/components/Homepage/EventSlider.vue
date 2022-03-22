@@ -1,6 +1,6 @@
 <template>
 	<div class="event__slider" id="js-articles-slider">
-		<template v-for="(article, i) in articles" :key="i">
+		<template v-for="article in articles.results" :key="article.id">
 			<prismic-link :field="article" class="event__card">
 				<prismic-image
 					class="event__card-img"
@@ -11,7 +11,9 @@
 					class="event__card-date"
 				>{{ $prismic.asDate(article.first_publication_date).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: '2-digit' }) }}</div>
 				<h3 class="event__card-title">{{ $prismic.asText(article.data.title) }}</h3>
-				<p class="event__card-description">{{ $prismic.asText(article.data.short_description) }}</p>
+				<p
+					class="event__card-description"
+				>{{ truncateString($prismic.asText(article.data.short_description), 130) }}</p>
 			</prismic-link>
 		</template>
 	</div>
@@ -25,6 +27,15 @@ export default {
 	data() {
 		return {
 			eventSlider: undefined
+		}
+	},
+	methods: {
+		// TODO: Move to useTruncateString (Composition API)
+		truncateString(str, num) {
+			if (str.length <= num) {
+				return str
+			}
+			return str.slice(0, num) + '...'
 		}
 	},
 	mounted() {

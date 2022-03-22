@@ -87,7 +87,8 @@
 			box-sizing: content-box;
 		}
 		&--80h::after {
-			height: 75%;
+			max-height: 80vh;
+			min-height: 600px;
 		}
 	}
 }

@@ -1,0 +1,18 @@
+.paginate {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	justify-content: center;
+	margin-top: 64px;
+
+	&__prev,
+	&__next {
+		line-height: 0;
+		color: $vert;
+
+		&:disabled {
+			color: $vert-60;
+			cursor: not-allowed;
+		}
+	}
+}

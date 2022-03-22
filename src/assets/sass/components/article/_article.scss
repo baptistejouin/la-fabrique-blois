@@ -39,16 +39,11 @@
 	}
 	&__section {
 		margin: 0 auto;
-		// p,
-		// li,
-		// a,
-		// strong,
-		// em {
 		line-height: 1.7em;
 		text-align: justify;
 		max-width: min(60ch, 100vw - 2rem);
 		font-size: 18px;
-		// }
+
 		* + * {
 			margin-top: 1em;
 		}

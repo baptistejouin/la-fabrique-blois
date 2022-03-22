@@ -89,7 +89,7 @@
 	<error v-else-if="homeError || articlesError" />
 </template>
 <script setup>
-import { useAllPrismicDocumentsByType, useSinglePrismicDocument } from '@prismicio/vue'
+import { usePrismicDocumentsByType, useSinglePrismicDocument } from '@prismicio/vue'
 
 import Error from '@/components/Error.vue'
 import Loader from '@/components/Loader.vue'
@@ -99,5 +99,11 @@ import FaqItem from '@/components/Homepage/FaqItem.vue'
 import EventSlider from '@/components/Homepage/EventSlider.vue'
 
 const { data: home, error: homeError, state: homeState } = useSinglePrismicDocument('home')
-const { data: articles, error: articlesError, state: articlesState } = useAllPrismicDocumentsByType('articles')
+const { data: articles, error: articlesError, state: articlesState } = usePrismicDocumentsByType('articles', {
+	pageSize: 6,
+	orderings: {
+		field: 'document.first_publication_date',
+		direction: 'desc'
+	}
+})
 </script>
