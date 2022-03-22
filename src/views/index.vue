@@ -9,7 +9,7 @@
 					<p class="header__description">{{ $prismic.asText(home.data.description) }}</p>
 					<div class="btn__wrapper">
 						<a href="#" class="btn">Je visite en 360° !</a>
-						<a href="#" class="btn btn--secondary">Je réserve une salle</a>
+						<router-link :to="{ name: 'about' }" class="btn btn--secondary">Je réserve une salle</router-link>
 					</div>
 				</div>
 				<div class="header__right">
@@ -24,15 +24,17 @@
 					<div class="about__info">
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_phone.svg" />
-							{{ $prismic.asText(home.data.phone) }}
+							<a href="tel:+33629317309">{{ $prismic.asText(home.data.phone) }}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_mail.svg" />
-							{{ $prismic.asText(home.data.email) }}
+							<a href="mailto:hello@lafabrique-blois.fr">{{ $prismic.asText(home.data.email) }}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_pinpoint.svg" />
-							{{ $prismic.asText(home.data.adress) }}
+							<a href="https://www.google.com/maps/place/La+Fabrique/@47.5941184,1.3336332,16z/data=!4m9!1m2!2m1!1sla+fabrique+blois!3m5!1s0x47e4a8061cf4a189:0xb28fb2df5099ea60!8m2!3d47.5941812!4d1.3377737!15sChFsYSBmYWJyaXF1ZSBibG9pc5IBEXJlY3JlYXRpb25fY2VudGVy">{{
+								$prismic.asText(home.data.adress)
+							}}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_calendar.svg" />
@@ -78,7 +80,7 @@
 							<img class="faq__question-icon" src="@/assets/img/icones/icon_help.svg" alt />
 							<h3>Tu as encore des questions&nbsp;?</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet euismod elementum.</p>
-							<a href="#" class="btn">Nous contacter</a>
+							<router-link :to="{ name: 'contact' }" class="btn">Nous contacter</router-link>
 						</div>
 					</div>
 				</div>
@@ -99,7 +101,11 @@ import FaqItem from '@/components/Homepage/FaqItem.vue'
 import EventSlider from '@/components/Homepage/EventSlider.vue'
 
 const { data: home, error: homeError, state: homeState } = useSinglePrismicDocument('home')
-const { data: articles, error: articlesError, state: articlesState } = usePrismicDocumentsByType('articles', {
+const {
+	data: articles,
+	error: articlesError,
+	state: articlesState
+} = usePrismicDocumentsByType('articles', {
 	pageSize: 6,
 	orderings: {
 		field: 'document.first_publication_date',

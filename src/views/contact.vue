@@ -27,22 +27,11 @@
 				</div>
 				<div class="form__group">
 					<label class="form__label" for="email">Votre adresse mail</label>
-					<input
-						class="form__input"
-						type="email"
-						id="email"
-						placeholder="ex. adresse@email.com"
-						required
-					/>
+					<input class="form__input" type="email" id="email" placeholder="ex. adresse@email.com" required />
 				</div>
 				<div class="form__group">
 					<label class="form__label" for="message">Message</label>
-					<textarea
-						class="form__textarea"
-						id="message"
-						placeholder="ex. Bonjour, je vous contact à propos de..."
-						required
-					></textarea>
+					<textarea class="form__textarea" id="message" placeholder="ex. Bonjour, je vous contacte à propos de..." required></textarea>
 				</div>
 				<div class="form__submit">
 					<button class="btn">Soumettre mon message</button>
@@ -86,5 +75,4 @@ import { useSinglePrismicDocument } from '@prismicio/vue'
 import Navbar from '@/components/Navbar.vue'
 import Foot from '@/components/Footer/Footer.vue'
 const { data: home, error: homeError, state: homeState } = useSinglePrismicDocument('home')
-
 </script>
