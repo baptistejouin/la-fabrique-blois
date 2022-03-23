@@ -51,7 +51,7 @@ const router = createRouter({
 			}
 		},
 		{
-			path: '/:pathMatch(.*)*',
+			path: '/*',
 			alias: '/404',
 			name: 'NotFound',
 			component: NotFound,
