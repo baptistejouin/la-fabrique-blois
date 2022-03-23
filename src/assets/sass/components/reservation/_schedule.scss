@@ -4,12 +4,14 @@
     aspect-ratio: 3/1;
     width: 100%;
     border: none;
-    margin-top: -200px;
+    margin-top: 200px;
     margin-bottom: -400px;
+    @include before(742px) {
+        height: 1500px;
+    }
 }
 
 .schedule {
-    z-index: 2;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: -20%;
 }
