@@ -20,9 +20,7 @@
 		</div>
 	</section>-->
 	<footer class="footer section-mt">
-		<h2
-			class="visibility-hidden"
-		>Toute les pages importantes de La Fabrique ainsi que nos réseaux sociaux.</h2>
+		<h2 class="visibility-hidden">Toute les pages importantes de La Fabrique ainsi que nos réseaux sociaux.</h2>
 		<div class="footer__wrapper container">
 			<div class="footer__info">
 				<img src="@/assets/img/logos/logo_fabrique.svg" alt />
@@ -60,22 +58,18 @@
 				<div>
 					<h3 class="footer__link-title">Nous trouver</h3>
 					<ul class="footer__link-list">
-						<li class="footer__link-item">
-							<img src="@/assets/img/icones/icon_pinpoint.svg" />7 Rue d'Auvergne, 41000 Blois
-						</li>
-						<li class="footer__link-item">
-							<img src="@/assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.
-						</li>
+						<li class="footer__link-item"><img src="@/assets/img/icones/icon_pinpoint.svg" />7 Rue d'Auvergne, 41000 Blois</li>
+						<li class="footer__link-item"><img src="@/assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</li>
 					</ul>
 				</div>
 			</div>
 			<div class="footer__social">
 				<h3>Suivez-nous sur&nbsp;:</h3>
 				<div class="footer__social-list">
-					<a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+					<a href="https://www.instagram.com/lafabriqueblois/?hl=fr" target="_blank" rel="noopener noreferrer">
 						<img src="@/assets/img/icones/icon_instagram.svg" alt />
 					</a>
-					<a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+					<a href="https://www.facebook.com/LaFabrique.Blois/" target="_blank" rel="noopener noreferrer">
 						<img src="@/assets/img/icones/icon_facebook.svg" alt />
 					</a>
 					<a href="http://snapchat.com" target="_blank" rel="noopener noreferrer">

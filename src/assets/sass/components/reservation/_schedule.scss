@@ -1,5 +1,5 @@
 .schedule__iframe {
-    height: 1000px;
+    height: 1200px;
     overflow: hidden;
     aspect-ratio: 3/1;
     width: 100%;
@@ -9,6 +9,7 @@
 }
 
 .schedule {
+    z-index: 2;
     overflow: hidden;
     margin-top: 40px;
 }
