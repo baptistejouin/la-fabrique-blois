@@ -1,7 +1,7 @@
 <template>
 	<loader v-if="homeState === 'pending' || aboutState === 'pending'" />
 	<template v-else-if="about && home">
-		<header class="header__background-green header__background-green--80h">
+		<header class="header__background-green">
 			<div class="container">
 				<navbar />
 				<ul class="breadcrumb">
@@ -44,9 +44,13 @@
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_pinpoint.svg" />
-							<a href="https://www.google.com/maps/place/La+Fabrique/@47.5941184,1.3336332,16z/data=!4m9!1m2!2m1!1sla+fabrique+blois!3m5!1s0x47e4a8061cf4a189:0xb28fb2df5099ea60!8m2!3d47.5941812!4d1.3377737!15sChFsYSBmYWJyaXF1ZSBibG9pc5IBEXJlY3JlYXRpb25fY2VudGVy">{{
-								$prismic.asText(home.data.adress)
-							}}</a>
+							<a
+								href="https://www.google.com/maps/place/La+Fabrique/@47.5941184,1.3336332,16z/data=!4m9!1m2!2m1!1sla+fabrique+blois!3m5!1s0x47e4a8061cf4a189:0xb28fb2df5099ea60!8m2!3d47.5941812!4d1.3377737!15sChFsYSBmYWJyaXF1ZSBibG9pc5IBEXJlY3JlYXRpb25fY2VudGVy"
+							>
+								{{
+									$prismic.asText(home.data.adress)
+								}}
+							</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_calendar.svg" />
@@ -58,7 +62,12 @@
 
 			<section class="container members section-mt">
 				<div class="members__portraits">
-					<prismic-image v-for="member in about.data.members" class="members__portraits-img" :field="member.img" :title="$prismic.asText(member.name)" />
+					<prismic-image
+						v-for="member in about.data.members"
+						class="members__portraits-img"
+						:field="member.img"
+						:title="$prismic.asText(member.name)"
+					/>
 				</div>
 				<div class="members__description">
 					<h2>{{ $prismic.asText(about.data.who_we_title) }}</h2>

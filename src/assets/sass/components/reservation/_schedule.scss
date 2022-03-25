@@ -1,14 +1,18 @@
-.schedule__iframe {
-    height: 1000px;
-    overflow: hidden;
-    aspect-ratio: 3/1;
-    width: 100%;
-    border: none;
-    margin-top: -200px;
-    margin-bottom: -400px;
-}
-
 .schedule {
-    overflow: hidden;
-    margin-top: 40px;
+	overflow: hidden;
+	// margin-top: 40px;
+
+	&__iframe {
+		height: 1000px;
+		/* overflow: scroll; */
+		width: 100%;
+		border: none;
+		margin-top: -15%;
+		margin-bottom: -28%;
+
+		@include before(sm) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
 }

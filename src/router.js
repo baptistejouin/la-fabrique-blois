@@ -4,6 +4,9 @@ import NotFound from '@/components/NotFound.vue'
 const router = createRouter({
 	history: createWebHistory(),
 	linkActiveClass: 'navbar__item--active',
+	scrollBehavior() {
+		return { top: 0 }
+	},
 	routes: [
 		{
 			path: '/',

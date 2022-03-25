@@ -2,7 +2,7 @@
 	<!-- <section class="newsletter container section-mt">
 		<h2 class="newsletter__title">Reste informé de nos actualités, inscris-toi à notre newsletter&nbsp;:</h2>
 		<input class="newsletter__input" type="text" placeholder="ex. mon-adresse@mail.com" />
-	</section>
+	</section>-->
 	<section class="partners section-mt" v-if="partners">
 		<div class="container">
 			<div class="partners__header">
@@ -16,10 +16,10 @@
 					</button>
 				</div>
 			</div>
-			<partners-slider :partners="partners"/>
+			<partners-slider :partners="partners" />
 		</div>
-	</section>-->
-	<footer class="footer section-mt">
+	</section>
+	<footer class="footer">
 		<h2
 			class="visibility-hidden"
 		>Toute les pages importantes de La Fabrique ainsi que nos réseaux sociaux.</h2>

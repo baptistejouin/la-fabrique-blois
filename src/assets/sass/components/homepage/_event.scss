@@ -4,6 +4,7 @@
 
 	&__slider {
 		display: flex;
+		overflow: visible;
 	}
 
 	&__header {
@@ -68,4 +69,7 @@
 			display: block;
 		}
 	}
+}
+.tns-ovh {
+	overflow: visible;
 }
