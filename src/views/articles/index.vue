@@ -20,7 +20,11 @@
 				<section class="articles__grid">
 					<article v-for="article in content.results" :key="article.id" class="articles__container">
 						<prismic-link :field="article">
-							<prismic-image class="articles__thumbnail" :field="article.data.thumbnail" />
+							<prismic-image
+								class="articles__thumbnail"
+								:field="article.data.thumbnail"
+								:imgix-params="{ h: 450 }"
+							/>
 							<div
 								class="articles__date"
 							>{{ $prismic.asDate(article.first_publication_date).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: '2-digit' }) }}</div>
@@ -32,13 +36,31 @@
 					</article>
 				</section>
 				<div class="paginate">
-					<button class="paginate__prev" :disabled="!content.prev_page">
+					<a
+						v-if="content.prev_page && content.prev_page != 1"
+						class="paginate__prev"
+						:href="`?page=${content.page - 1}`"
+					>
+						<svg width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="m10 16 10 10 1.4-1.4-8.6-8.6 8.6-8.6L20 6 10 16Z" />
+						</svg>
+					</a>
+					<button v-else class="paginate__prev" disabled>
 						<svg width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 							<path d="m10 16 10 10 1.4-1.4-8.6-8.6 8.6-8.6L20 6 10 16Z" />
 						</svg>
 					</button>
 					<div class="paginate__current">page {{ content.page }}/{{ content.total_pages }}</div>
-					<button class="paginate__next" :disabled="!content.next_page">
+					<a
+						v-if="content.next_page && content.total_pages != content.page"
+						class="paginate__next"
+						:href="`?page=${content.page + 1}`"
+					>
+						<svg width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6l10 10Z" />
+						</svg>
+					</a>
+					<button v-else class="paginate__next" disabled>
 						<svg width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 							<path d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6l10 10Z" />
 						</svg>
@@ -54,10 +76,9 @@
 	<error v-else-if="articlesError" />
 </template>
 
-
 <script setup>
-// import { ref, onMounted } from 'vue'
-// import { useRoute, useRouter } from 'vue-router'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 import { usePrismicDocumentsByType } from '@prismicio/vue'
 
@@ -66,42 +87,18 @@ import Error from '@/components/Error.vue'
 import Navbar from '@/components/Navbar.vue'
 import Foot from '@/components/Footer/Footer.vue'
 
-const { data: content, error: articlesError, state: articlesState } = usePrismicDocumentsByType('articles', {
-	pageSize: 6,
-	orderings: {
-		field: 'document.first_publication_date',
-		direction: 'desc'
-	}
-})
+const route = useRoute()
+let page = ref(route.query.page || 1)
 
-// const route = useRoute()
-// const router = useRouter()
-// let page = ref(route.query.page || 1)
-// let content = ref({})
-
-
-// function getContent() {
-// 	return usePrismicDocumentsByType('articles', {
-// 		pageSize: 2,
-// 		page: page.value,
-// 		orderings: {
-// 			field: 'document.first_publication_date',
-// 			direction: 'desc'
-// 		},
-// 	})
-// }
-
-// function changePage(action) {
-// 	if (action === 'next') page.value++
-// 	if (action === 'prev') page.value--
-// 	router.push({ query: { page: page.value } })
-// 	// route.push({ path: '/users/eduardo' })
-// 	// content.value = getContent()
-// }
-
-// onMounted(() => {
-// 	content.value = getContent()
-// })
+const { data: content, error: articlesError, state: articlesState } =
+	usePrismicDocumentsByType('articles', {
+		pageSize: 3,
+		page: page.value,
+		orderings: {
+			field: 'document.first_publication_date',
+			direction: 'desc'
+		}
+	})
 
 // TODO: Move to useTruncateString (Composition API)
 function truncateString(str, num) {

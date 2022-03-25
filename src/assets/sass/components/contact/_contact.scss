@@ -7,8 +7,12 @@
 	}
 
 	@include before(lg) {
-		flex-direction: column-reverse;
+		flex-direction: column;
 		gap: 48px;
+	}
+
+	@include before(sm) {
+		display: block;
 	}
 
 	&__right {
@@ -20,10 +24,16 @@
 			max-width: none;
 			width: 100%;
 		}
+		@include before(sm) {
+			margin-top: 125px;
+		}
 	}
 
 	&__left {
 		flex-grow: 1;
+		@include before(sm) {
+			margin-top: 125px;
+		}
 	}
 
 	&__info {

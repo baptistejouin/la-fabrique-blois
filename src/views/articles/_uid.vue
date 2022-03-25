@@ -24,7 +24,7 @@
 				<ul class="article__keywords">
 					<li
 						class="article__keyword"
-						v-for="(keyword, i) in article.data.keywords.split('\n')"
+						v-for="(keyword, i) in article.data.keywords?.split('\n')"
 						:key="i"
 					>{{ keyword }}</li>
 				</ul>

@@ -10,7 +10,8 @@
 		line-height: 0;
 		color: $vert;
 
-		&:disabled {
+		&[disabled] {
+			opacity: 0.6;
 			color: $vert-60;
 			cursor: not-allowed;
 		}

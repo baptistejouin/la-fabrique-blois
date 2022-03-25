@@ -33,13 +33,13 @@
 					<h3 class="footer__link-title">La structure</h3>
 					<ul class="footer__link-list">
 						<li class="footer__link-item">
-							<a href="#">À propos</a>
+							<router-link :to="{ name: 'index' }">À propos</router-link>
 						</li>
 						<li class="footer__link-item">
-							<a href="#">Événements</a>
+							<router-link :to="{ name: 'articles' }">Événements</router-link>
 						</li>
 						<li class="footer__link-item">
-							<a href="#">Réservation</a>
+							<router-link :to="{ name: 'reservation' }">Réservation</router-link>
 						</li>
 					</ul>
 				</div>
@@ -47,10 +47,10 @@
 					<h3 class="footer__link-title">Informations</h3>
 					<ul class="footer__link-list">
 						<li class="footer__link-item">
-							<a href="#">Nous rejoindre</a>
+							<router-link :to="{ name: 'about' }">Nous rejoindre</router-link>
 						</li>
 						<li class="footer__link-item">
-							<a href="#">Contact</a>
+							<router-link :to="{ name: 'contact' }">Contact</router-link>
 						</li>
 						<li class="footer__link-item">
 							<a href="#">Mentions Légales</a>
@@ -77,13 +77,13 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="@/assets/img/icones/icon_instagram.svg" alt />
+						<img src="@/assets/img/icones/icon_instagram.svg" alt="La Fabrique Instagram" />
 					</a>
 					<a href="https://www.facebook.com/LaFabrique.Blois/" target="_blank" rel="noopener noreferrer">
-						<img src="@/assets/img/icones/icon_facebook.svg" alt />
+						<img src="@/assets/img/icones/icon_facebook.svg" alt="La Fabrique Facebook" />
 					</a>
 					<a href="http://snapchat.com" target="_blank" rel="noopener noreferrer">
-						<img src="@/assets/img/icones/icon_snapchat.svg" alt />
+						<img src="@/assets/img/icones/icon_snapchat.svg" alt="La Fabrique Snapchat" />
 					</a>
 				</div>
 			</div>
