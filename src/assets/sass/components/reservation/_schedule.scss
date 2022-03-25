@@ -11,8 +11,8 @@
 		margin-bottom: -28%;
 
 		@include before(sm) {
-			margin-top: 0;
-			margin-bottom: 0;
+			// margin-top: 0;
+			// margin-bottom: 0;
 		}
 	}
 }
