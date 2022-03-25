@@ -72,10 +72,14 @@
 			<div class="footer__social">
 				<h3>Suivez-nous sur&nbsp;:</h3>
 				<div class="footer__social-list">
-					<a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.instagram.com/lafabriqueblois/?hl=fr"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src="@/assets/img/icones/icon_instagram.svg" alt />
 					</a>
-					<a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+					<a href="https://www.facebook.com/LaFabrique.Blois/" target="_blank" rel="noopener noreferrer">
 						<img src="@/assets/img/icones/icon_facebook.svg" alt />
 					</a>
 					<a href="http://snapchat.com" target="_blank" rel="noopener noreferrer">

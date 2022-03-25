@@ -9,7 +9,7 @@
 					<p class="header__description">{{ $prismic.asText(home.data.description) }}</p>
 					<div class="btn__wrapper">
 						<a href="#" class="btn">Je visite en 360° !</a>
-						<router-link :to="{ name: 'about' }" class="btn btn--secondary">Je réserve une salle</router-link>
+						<router-link :to="{ name: 'reservation' }" class="btn btn--secondary">Je réserve une salle</router-link>
 					</div>
 				</div>
 				<div class="header__right">

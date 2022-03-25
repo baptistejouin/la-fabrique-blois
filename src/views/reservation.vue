@@ -21,7 +21,7 @@
 			></iframe>
 		</section>
 		<section class="container join section-mt">
-			<div class="about__right">
+			<div class="join__right">
 				<h2>Nous rejoindre</h2>
 				<p>
 					Pour réserver une salle à La Fabrique, vous avez besoin de vous inscrire dans la structure.
