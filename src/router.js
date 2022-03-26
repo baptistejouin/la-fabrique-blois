@@ -13,7 +13,7 @@ const router = createRouter({
             component: () =>
                 import ('@/views/index.vue'),
             meta: {
-                title: "Page d'accueil | La Fabrique"
+                title: "Accueil | La Fabrique"
             }
         },
         {
