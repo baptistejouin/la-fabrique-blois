@@ -8,7 +8,7 @@
 					<prismic-rich-text :field="home.data.title" class="header__title" />
 					<p class="header__description">{{ $prismic.asText(home.data.description) }}</p>
 					<div class="btn__wrapper">
-						<a href="#" class="btn">Je visite en 360° !</a>
+						<a href="https://www.youtube.com/watch?v=HNApxhvK1Hg" class="btn">Je visite en 360° !</a>
 						<router-link :to="{ name: 'reservation' }" class="btn btn--secondary">Je réserve une salle</router-link>
 					</div>
 				</div>
@@ -28,18 +28,12 @@
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_mail.svg" />
-							<a
-								:href="`mailto:${$prismic.asText(home.data.email)}`"
-							>{{ $prismic.asText(home.data.email) }}</a>
+							<a :href="`mailto:${$prismic.asText(home.data.email)}`">{{ $prismic.asText(home.data.email) }}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_pinpoint.svg" />
-							<a
-								:href="`https://www.google.fr/maps/search/${$prismic.asText(home.data.adress)}?hl=fr&source=opensearch`"
-							>
-								{{
-									$prismic.asText(home.data.adress)
-								}}
+							<a :href="`https://www.google.fr/maps/search/${$prismic.asText(home.data.adress)}?hl=fr&source=opensearch`">
+								{{ $prismic.asText(home.data.adress) }}
 							</a>
 						</div>
 						<div class="about__line">
