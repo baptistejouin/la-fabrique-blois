@@ -20,7 +20,7 @@
 				src="https://www.supersaas.fr/schedule/LaFabrique/R%C3%A9servation_de_salles?"
 			></iframe>
 		</section>
-		<section class="container join section-mt">
+		<section class="container join section-mt" id="join">
 			<div class="join__right">
 				<h2>Nous rejoindre</h2>
 				<p>

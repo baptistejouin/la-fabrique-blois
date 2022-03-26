@@ -44,10 +44,6 @@
 		font-size: 16px;
 		color: $noir-60;
 
-		&--active {
-			font-weight: 500;
-			color: $noir;
-		}
 		@include before(md) {
 			color: rgba(white, 0.6);
 			a {
@@ -63,6 +59,10 @@
 				font-size: 24px;
 			}
 		}
+	}
+	& &__item--active {
+		font-weight: 500;
+		color: $noir;
 	}
 
 	&__logo img {

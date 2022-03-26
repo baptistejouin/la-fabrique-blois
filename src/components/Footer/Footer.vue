@@ -20,18 +20,23 @@
 		</div>
 	</section>
 	<footer class="footer">
-		<h2 class="visibility-hidden">Toute les pages importantes de La Fabrique ainsi que nos réseaux sociaux.</h2>
+		<h2
+			class="visibility-hidden"
+		>Toute les pages importantes de La Fabrique ainsi que nos réseaux sociaux.</h2>
 		<div class="footer__wrapper container">
 			<div class="footer__info">
 				<img src="@/assets/img/logos/logo_fabrique.svg" alt />
-				<p>Centre d’activités collectives, de création et d’accueil à destination des jeunes blésois.</p>
+				<div>
+					<h3 class="footer__link-title">La Fabrique</h3>
+					<p>Centre d’activités collectives, de création et d’accueil à destination des jeunes blésois.</p>
+				</div>
 			</div>
 			<div class="footer__links">
 				<div>
 					<h3 class="footer__link-title">La structure</h3>
 					<ul class="footer__link-list">
 						<li class="footer__link-item">
-							<router-link :to="{ name: 'index' }">À propos</router-link>
+							<router-link :to="{ name: 'about' }">À propos</router-link>
 						</li>
 						<li class="footer__link-item">
 							<router-link :to="{ name: 'articles' }">Événements</router-link>
@@ -45,7 +50,7 @@
 					<h3 class="footer__link-title">Informations</h3>
 					<ul class="footer__link-list">
 						<li class="footer__link-item">
-							<router-link :to="{ name: 'about' }">Nous rejoindre</router-link>
+							<router-link :to="{ name: 'reservation', hash: '#join' }">Nous rejoindre</router-link>
 						</li>
 						<li class="footer__link-item">
 							<router-link :to="{ name: 'contact' }">Contact</router-link>
@@ -58,15 +63,23 @@
 				<div>
 					<h3 class="footer__link-title">Nous trouver</h3>
 					<ul class="footer__link-list">
-						<li class="footer__link-item"><img src="@/assets/img/icones/icon_pinpoint.svg" />7 Rue d'Auvergne, 41000 Blois</li>
-						<li class="footer__link-item"><img src="@/assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.</li>
+						<li class="footer__link-item">
+							<img src="@/assets/img/icones/icon_pinpoint.svg" />7 Rue d'Auvergne, 41000 Blois
+						</li>
+						<li class="footer__link-item">
+							<img src="@/assets/img/icones/icon_calendar.svg" />Du lundi au vendredi (12h30 - 18h), ouverture à 14 h le mercredi.
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="footer__social">
-				<h3>Suivez-nous sur&nbsp;:</h3>
+				<h3>Suivez-nous&nbsp;!</h3>
 				<div class="footer__social-list">
-					<a href="https://www.instagram.com/lafabriqueblois/?hl=fr" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.instagram.com/lafabriqueblois/?hl=fr"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src="@/assets/img/icones/icon_instagram.svg" alt="La Fabrique Instagram" />
 					</a>
 					<a href="https://www.facebook.com/LaFabrique.Blois/" target="_blank" rel="noopener noreferrer">
@@ -78,14 +91,31 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer__developers">
+		<div class="footer__credits">
 			Made with
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-				<path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"></path>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				aria-hidden="true"
+				role="img"
+				width="16"
+				height="16"
+				preserveAspectRatio="xMidYMid meet"
+				viewBox="0 0 24 24"
+			>
+				<path
+					fill="currentColor"
+					d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"
+				/>
 			</svg>
-			by <a href="https://github.com/baptistejouin/la-fabrique-blois">Baptiste</a>
-			et
-			<a href="https://alexboc.fr">Alexian</a>.
+			by
+			<a
+				href="https://github.com/baptistejouin"
+				target="_blank"
+				rel="noopener noreferrer"
+			>Baptiste</a>
+			and
+			<a href="https://alexboc.fr" target="_blank" rel="noopener noreferrer">Alexian</a>.
 		</div>
 	</footer>
 </template>

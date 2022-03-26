@@ -92,7 +92,7 @@ let page = ref(route.query.page || 1)
 
 const { data: content, error: articlesError, state: articlesState } =
 	usePrismicDocumentsByType('articles', {
-		pageSize: 3,
+		pageSize: 9,
 		page: page.value,
 		orderings: {
 			field: 'document.first_publication_date',
