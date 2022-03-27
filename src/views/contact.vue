@@ -15,23 +15,49 @@
 	</header>
 	<main>
 		<section class="container contact section-mt" v-if="home">
-			<div class="contact__left">
+			<form class="contact__left" action="https://baptiste-jouin.go.yj.fr/sendemail.php" method="POST">
 				<h2>Vous avez une question, une suggestion ?</h2>
 				<div class="form__group">
 					<label class="form__label" for="name">Votre nom</label>
-					<input class="form__input" type="text" id="name" placeholder="ex. Michel" required />
+					<input
+						class="form__input"
+						name="firstname"
+						type="text"
+						id="name"
+						placeholder="ex. Michel"
+						required
+					/>
 				</div>
 				<div class="form__group">
 					<label class="form__label" for="lastname">Votre prénom</label>
-					<input class="form__input" type="text" id="lastname" placeholder="ex. Jean" required />
+					<input
+						class="form__input"
+						name="lastname"
+						type="text"
+						id="lastname"
+						placeholder="ex. Jean"
+						required
+					/>
 				</div>
 				<div class="form__group">
 					<label class="form__label" for="email">Votre adresse mail</label>
 					<input
 						class="form__input"
 						type="email"
+						name="sender"
 						id="email"
 						placeholder="ex. adresse@email.com"
+						required
+					/>
+				</div>
+				<div class="form__group">
+					<label class="form__label" for="subject">Sujet</label>
+					<input
+						class="form__input"
+						type="text"
+						name="subject"
+						id="email"
+						placeholder="ex. Demande de rendez-vous"
 						required
 					/>
 				</div>
@@ -40,14 +66,15 @@
 					<textarea
 						class="form__textarea"
 						id="message"
+						name="content"
 						placeholder="ex. Bonjour, je vous contacte à propos de..."
 						required
 					></textarea>
 				</div>
 				<div class="form__submit">
-					<button class="btn">Soumettre mon message</button>
+					<button class="btn" type="submit">Soumettre mon message</button>
 				</div>
-			</div>
+			</form>
 			<div class="contact__right">
 				<div class="contact__info">
 					<div class="about__line">
