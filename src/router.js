@@ -59,15 +59,6 @@ const router = createRouter({
             }
         },
         {
-            path: '/*',
-            alias: '/404',
-            name: 'NotFound',
-            component: NotFound,
-            meta: {
-                title: '404 | La Fabrique'
-            }
-        },
-        {
             path: '/terms',
             alias: '/mentions-legales',
             name: 'terms',
@@ -75,6 +66,15 @@ const router = createRouter({
                 import ('@/views/terms.vue'),
             meta: {
                 title: 'Mentions Légales | La Fabrique'
+            }
+        },
+        {
+            path: '/*',
+            alias: '/404',
+            name: 'NotFound',
+            component: NotFound,
+            meta: {
+                title: '404 | La Fabrique'
             }
         }
     ]

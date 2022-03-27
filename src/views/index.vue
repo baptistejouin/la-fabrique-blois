@@ -13,8 +13,20 @@
 					</div>
 				</div>
 				<div class="header__right">
-					<!-- TODO: Make it reactive and slidebale -->
-					<img src="@/assets/img/content/salle_video.jpg" />
+					<swiper
+						:effect="'cards'"
+						:grabCursor="true"
+						:modules="modules"
+						class="header__slider"
+						:autoplay="{
+							delay: 2500,
+							disableOnInteraction: false,
+						}"
+					>
+						<swiper-slide v-for="slide in home.data.slider">
+							<prismic-image :field="slide.img" />
+						</swiper-slide>
+					</swiper>
 				</div>
 			</div>
 		</header>
@@ -28,13 +40,15 @@
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_mail.svg" />
-							<a :href="`mailto:${$prismic.asText(home.data.email)}`">{{ $prismic.asText(home.data.email) }}</a>
+							<a
+								:href="`mailto:${$prismic.asText(home.data.email)}`"
+							>{{ $prismic.asText(home.data.email) }}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_pinpoint.svg" />
-							<a :href="`https://www.google.fr/maps/search/${$prismic.asText(home.data.adress)}?hl=fr&source=opensearch`">
-								{{ $prismic.asText(home.data.adress) }}
-							</a>
+							<a
+								:href="`https://www.google.fr/maps/search/${$prismic.asText(home.data.adress)}?hl=fr&source=opensearch`"
+							>{{ $prismic.asText(home.data.adress) }}</a>
 						</div>
 						<div class="about__line">
 							<img src="@/assets/img/icones/icon_calendar.svg" />
@@ -99,6 +113,12 @@ import Navbar from '@/components/Navbar.vue'
 import Foot from '@/components/Footer/Footer.vue'
 import FaqItem from '@/components/Homepage/FaqItem.vue'
 import EventSlider from '@/components/Homepage/EventSlider.vue'
+import { Swiper, SwiperSlide } from "swiper/vue"
+import "swiper/css"
+import "swiper/css/effect-cards"
+import { EffectCards, Autoplay } from "swiper"
+
+const modules = [Autoplay, EffectCards]
 
 const { data: home, error: homeError, state: homeState } = useSinglePrismicDocument('home')
 const {

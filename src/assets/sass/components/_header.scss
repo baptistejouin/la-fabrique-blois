@@ -50,27 +50,28 @@
 		@include before(lg) {
 			justify-content: center;
 		}
+	}
+	& .swiper {
+		width: 40vw;
+		height: 400px;
+		padding: 0 8%;
 
-		img {
-			max-width: 100%;
-			width: 40vw;
-			height: 400px;
-			object-fit: cover;
-			border-radius: 16px;
-
-			@include after(1500px) {
-				max-width: 580px;
-			}
-
-			@include before(lg) {
-				width: 600px;
-			}
-
-			@include before(md) {
-				width: 100%;
-			}
+		@include before(lg) {
+			width: 85%;
+		}
+		@include before(md) {
+			width: 100%;
 		}
 	}
+	&__slider {
+		img {
+			height: 400px;
+		}
+		.swiper-slide {
+			border-radius: 18px;
+		}
+	}
+
 	&__background-green {
 		position: relative;
 

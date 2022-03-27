@@ -63,6 +63,9 @@
 	& &__item--active {
 		font-weight: 500;
 		color: $noir;
+		@include before(sm) {
+			color: #fff;
+		}
 	}
 
 	&__logo img {
