@@ -12,7 +12,37 @@
 						<router-link :to="{ name: 'articles' }">Évènements</router-link>
 					</li>
 				</ul>
-				<h1>Évènements et actualités.</h1>
+				<div class="search__wrapper">
+					<h1>Évènements et actualités.</h1>
+					<!-- <form class="search__box" action="http://baptiste-jouin.fr" method="GET">
+						<button class="search__btn" type="button">
+							<svg
+								class="search__icon"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								aria-hidden="true"
+								role="img"
+								width="32"
+								height="32"
+								preserveAspectRatio="xMidYMid meet"
+								viewBox="0 0 24 24"
+							>
+								<g
+									fill="none"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+								>
+									<circle cx="11" cy="11" r="8" />
+									<path d="m21 21l-4.35-4.35" />
+								</g>
+							</svg>
+						</button>
+						<input type="text" class="search__input" placeholder="Recherche par mots-clés" />
+						<button type="submit" class="visibility-hidden">Rechercher</button>
+					</form>-->
+				</div>
 			</div>
 		</header>
 		<main class="container">

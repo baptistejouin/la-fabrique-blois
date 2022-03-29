@@ -10,7 +10,7 @@
 					<router-link :to="{ name: 'reservation' }">Réservation</router-link>
 				</li>
 			</ul>
-			<div v-if="about" class="rooms__header">
+			<div class="rooms__header">
 				<h1 class="rooms__title">Réservation de salle</h1>
 				<div class="slider-control" id="js-rooms-controls-slider">
 					<button aria-label="Previous slide" title="Previous slide">
@@ -21,7 +21,7 @@
 					</button>
 				</div>
 			</div>
-			<rooms-slider :rooms="about.data.rooms" />
+			<rooms-slider v-if="about" :rooms="about.data.rooms" />
 		</div>
 	</header>
 	<main>
